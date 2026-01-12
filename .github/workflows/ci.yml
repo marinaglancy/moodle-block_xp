@@ -115,7 +115,7 @@ jobs:
       #   if: ${{ !cancelled() }}
       #   run: moodle-plugin-ci phpmd
 
-      - name: Moodle Code Checker
+      - name: Moodle Code Checker (custom)
         if: ${{ !cancelled() }}
         run: |
           WWWROOT=$(cd moodle; pwd)
@@ -124,9 +124,13 @@ jobs:
           fi
           moodle-plugin-ci phpcs --max-warnings 0 --standard $WWWROOT/blocks/xp/phpcs.xml
 
-      # - name: Moodle PHPDoc Checker
-      #   if: ${{ !cancelled() }}
-      #   run: moodle-plugin-ci phpdoc --max-warnings 0
+      - name: Moodle Code Checker (full)
+        if: ${{ !cancelled() }}
+        run: moodle-plugin-ci phpcs --max-warnings 0
+
+      - name: Moodle PHPDoc Checker
+        if: ${{ !cancelled() }}
+        run: moodle-plugin-ci phpdoc --max-warnings 0
 
       - name: Validating
         if: ${{ !cancelled() }}
