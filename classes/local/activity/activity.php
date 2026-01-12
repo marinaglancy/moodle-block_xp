@@ -36,7 +36,6 @@ namespace block_xp\local\activity;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface activity {
-
     /**
      * Get when this happened.
      *
@@ -50,5 +49,4 @@ interface activity {
      * @return string
      */
     public function get_description();
-
 }

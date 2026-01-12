@@ -39,7 +39,6 @@ use block_xp\tests\base_testcase;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class user_utils_test extends base_testcase {
-
     /**
      * Test.
      *
@@ -117,7 +116,8 @@ final class user_utils_test extends base_testcase {
         $noreplyuser = \core_user::get_noreply_user();
         $adminuser = get_admin();
 
-        role_change_permission($DB->get_field('role', 'id', ['shortname' => 'user']),
+        role_change_permission(
+            $DB->get_field('role', 'id', ['shortname' => 'user']),
             \context_system::instance(),
             'block/xp:earnxp',
             CAP_ALLOW
@@ -153,5 +153,4 @@ final class user_utils_test extends base_testcase {
         $config->set('adminscanearnxp', true);
         $this->assertTrue(user_utils::can_earn_points(\context_system::instance(), $adminuser->id));
     }
-
 }

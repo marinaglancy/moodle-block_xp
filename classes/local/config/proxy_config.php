@@ -38,7 +38,6 @@ namespace block_xp\local\config;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class proxy_config implements config {
-
     /** @var config The config. */
     private $config;
 
@@ -98,5 +97,4 @@ class proxy_config implements config {
     public function set_many(array $values) {
         return $this->config->set_many($values);
     }
-
 }

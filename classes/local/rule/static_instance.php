@@ -36,7 +36,6 @@ namespace block_xp\local\rule;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class static_instance implements instance {
-
     /** @var object The record. */
     protected $record;
     /** @var \context The context. */
@@ -94,5 +93,4 @@ class static_instance implements instance {
             'char1' => $this->record->filterchar1,
         ];
     }
-
 }

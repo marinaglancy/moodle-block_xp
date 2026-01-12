@@ -52,7 +52,6 @@ use block_xp\local\utils\user_utils;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class course_user_state_store implements course_state_store, state_store_with_delete, state_store_with_reason {
-
     /** @var moodle_database The database. */
     protected $db;
     /** @var int The course ID. */
@@ -359,5 +358,4 @@ class course_user_state_store implements course_state_store, state_store_with_de
         $this->set($id, $amount);
         $this->logger->log_reason($id, $amount, $reason);
     }
-
 }

@@ -42,7 +42,6 @@ global $CFG;
  * @covers     \block_xp\local\stragey\course_world_collection_strategy
  */
 final class course_world_collection_strategy_test extends \advanced_testcase {
-
     public function test_is_action_accepted_no_limit(): void {
         $now = time();
         $log = ['a' => [$now, $now, $now, $now, $now, $now, $now, $now, $now]];
@@ -110,5 +109,4 @@ final class course_world_collection_strategy_test extends \advanced_testcase {
         $this->assertTrue(course_world_collection_strategy::is_action_accepted('d', $now, $log, 0, 0, 10));
         $this->assertFalse(course_world_collection_strategy::is_action_accepted('d', $now, $log, 5, 8000, 10));
     }
-
 }

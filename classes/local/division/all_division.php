@@ -30,7 +30,6 @@ use block_xp\local\userfilter\user_filter;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class all_division implements division {
-
     /**
      * Get the ID.
      *
@@ -57,5 +56,4 @@ class all_division implements division {
     public function get_user_filter(): user_filter {
         return new everyone();
     }
-
 }

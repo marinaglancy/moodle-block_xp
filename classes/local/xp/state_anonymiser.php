@@ -36,7 +36,6 @@ namespace block_xp\local\xp;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface state_anonymiser {
-
     /**
      * Return an anonymised state.
      *
@@ -44,5 +43,4 @@ interface state_anonymiser {
      * @return state
      */
     public function anonymise_state(state $state);
-
 }

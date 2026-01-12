@@ -54,7 +54,6 @@ use block_xp\local\xp\state_with_subject;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class report_table extends table_sql {
-
     /** @var moodle_database The DB. */
     protected $db;
     /** @var \block_xp\local\course_world The world. */
@@ -314,7 +313,8 @@ class report_table extends table_sql {
             $row->lvl = $row->state->get_level()->get_level();
 
             $formattedrow = $this->format_row($row);
-            $this->add_data_keyed($formattedrow,
+            $this->add_data_keyed(
+                $formattedrow,
                 $this->get_row_class($row)
             );
         }
@@ -346,7 +346,8 @@ class report_table extends table_sql {
         if ($this->logaccessperms && $this->logaccessperms->can_access_logs()) {
             $url = $this->urlresolver->reverse('log', ['courseid' => $this->world->get_courseid()]);
             $url->param('userid', $row->id);
-            $actions[] = new action_menu_link($url,
+            $actions[] = new action_menu_link(
+                $url,
                 new pix_icon('t/log', get_string('logs', 'core')),
                 get_string('viewlogs', 'block_xp')
             );
@@ -354,7 +355,8 @@ class report_table extends table_sql {
 
         if (isset($row->xp)) {
             $url = new moodle_url($this->baseurl, ['action' => '', 'delete' => 1, 'userid' => $row->id]);
-            $action = new action_menu_link($url,
+            $action = new action_menu_link(
+                $url,
                 new pix_icon('t/delete', get_string('delete', 'core')),
                 get_string('delete', 'core')
             );
@@ -482,7 +484,6 @@ class report_table extends table_sql {
 
         // It should never be empty, but if it is then never mind...
         if (!empty($orderby)) {
-
             // If we are sorting by lvl, remove the xp column as we treat them as alises.
             if (array_key_exists('lvl', $orderby)) {
                 unset($orderby['xp']);
@@ -554,5 +555,4 @@ class report_table extends table_sql {
             ['style' => 'margin: 1em 0']
         );
     }
-
 }

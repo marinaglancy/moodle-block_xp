@@ -47,7 +47,6 @@ namespace block_xp\local\config;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class mapped_config extends proxy_config {
-
     /** @var array The mappings. */
     private $mappings;
 
@@ -132,5 +131,4 @@ class mapped_config extends proxy_config {
         }, []);
         return parent::set_many($values);
     }
-
 }

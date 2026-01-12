@@ -40,7 +40,6 @@ use moodle_database;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class default_leaderboard_factory_maker implements leaderboard_factory_maker {
-
     /** @var moodle_database The database. */
     protected $db;
     /** @var config The config. */
@@ -66,5 +65,4 @@ class default_leaderboard_factory_maker implements leaderboard_factory_maker {
     public function get_leaderboard_factory(world $world, ?config $configoverride = null): leaderboard_factory {
         return new world_leaderboard_factory($this->db, $world, $configoverride);
     }
-
 }

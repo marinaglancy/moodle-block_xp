@@ -38,7 +38,6 @@ use block_xp\di;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class usage_report extends \core\task\scheduled_task {
-
     /**
      * Get name.
      *

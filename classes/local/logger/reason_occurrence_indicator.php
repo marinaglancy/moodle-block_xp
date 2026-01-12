@@ -39,7 +39,6 @@ use block_xp\local\reason\reason;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface reason_occurrence_indicator {
-
     /**
      * Has the reason ever happened.
      *
@@ -49,5 +48,4 @@ interface reason_occurrence_indicator {
      * @return bool
      */
     public function has_reason_happened_since($id, reason $reason, DateTime $since);
-
 }

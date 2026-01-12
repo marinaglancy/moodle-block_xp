@@ -38,7 +38,6 @@ use block_xp\local\reason\reason;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface state_store_with_reason extends state_store {
-
     /**
      * Add a certain amount of experience points.
      *
@@ -56,5 +55,4 @@ interface state_store_with_reason extends state_store {
      * @param reason $reason A reason.
      */
     public function set_with_reason($id, $amount, reason $reason);
-
 }

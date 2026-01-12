@@ -45,7 +45,6 @@ use block_xp\local\factory\levels_info_factory;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class course_world implements world {
-
     /** @var config The config. */
     protected $config;
     /** @var context The context. */
@@ -159,29 +158,24 @@ class course_world implements world {
             if ($state == course_world_config::DEFAULT_FILTERS_NOOP) {
                 // Early bail.
                 return $this->filtermanager;
-
             } else if ($state == course_world_config::DEFAULT_FILTERS_MISSING) {
                 // The default filters were not applied yet.
                 $this->filtermanager->import_default_filters();
                 $config->set('defaultfilters', course_world_config::DEFAULT_FILTERS_NOOP);
-
             } else if ($state == course_world_config::DEFAULT_FILTERS_STATIC) {
                 // We are in a legacy state, convert.
                 $this->filtermanager->convert_static_filters_to_regular();
                 $config->set('defaultfilters', course_world_config::DEFAULT_FILTERS_NOOP);
             }
-
         }
         return $this->filtermanager;
     }
 
     public function get_levels_info() {
         if (!$this->levelsinfo) {
-
             // We must apply this check in case an older version of XP+ is used with this.
             if ($this->levelsinfofactory) {
                 $this->levelsinfo = $this->levelsinfofactory->get_world_levels_info($this);
-
             } else {
                 $resolver = $this->urlresolverfactory->get_url_resolver($this);
                 $config = $this->get_config();
@@ -192,7 +186,6 @@ class course_world implements world {
                     $this->levelsinfo = new \block_xp\local\xp\algo_levels_info($data, $resolver);
                 }
             }
-
         }
         return $this->levelsinfo;
     }
@@ -232,7 +225,8 @@ class course_world implements world {
      */
     protected function get_state_store_observer() {
         if (!$this->statestoreobserver) {
-            $this->statestoreobserver = new \block_xp\local\observer\default_state_store_observer($this->context,
+            $this->statestoreobserver = new \block_xp\local\observer\default_state_store_observer(
+                $this->context,
                 $this->config,
                 $this->get_level_up_notification_service()
             );
@@ -305,5 +299,4 @@ class course_world implements world {
         $filtermanager->purge($category);
         $filtermanager->import_default_filters($category);
     }
-
 }

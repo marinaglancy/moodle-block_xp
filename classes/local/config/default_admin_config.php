@@ -53,7 +53,6 @@ namespace block_xp\local\config;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class default_admin_config extends immutable_config {
-
     /**
      * Constructor.
      */
@@ -95,5 +94,4 @@ class default_admin_config extends immutable_config {
             'usagereportid' => '',
         ]));
     }
-
 }

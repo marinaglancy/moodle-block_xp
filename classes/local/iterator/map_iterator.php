@@ -42,7 +42,6 @@ use Traversable;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class map_iterator extends IteratorIterator {
-
     /** @var callable The callable. */
     protected $callback;
 
@@ -67,5 +66,4 @@ class map_iterator extends IteratorIterator {
     public function current() {
         return call_user_func($this->callback, parent::current(), parent::key());
     }
-
 }

@@ -42,7 +42,6 @@ use block_xp\local\xp\level_with_description;
  * @deprecated Since 3.10.0. Use external service instead.
  */
 class levels_with_algo extends moodleform {
-
     /** @var config The config. */
     protected $config;
 
@@ -135,7 +134,8 @@ class levels_with_algo extends moodleform {
             $mform->addRule('lvlname_' . $i, get_string('maximumchars', '', 40), 'maxlength', 40);
             $mform->setType('lvlname_' . $i, PARAM_NOTAGS);
 
-            $el =& $mform->createElement('text',
+            $el =& $mform->createElement(
+                'text',
                 'lvldesc_' . $i,
                 get_string('leveldesc', 'block_xp'),
                 ['maxlength' => 255, 'size' => 50]
@@ -235,5 +235,4 @@ class levels_with_algo extends moodleform {
 
         return $errors;
     }
-
 }

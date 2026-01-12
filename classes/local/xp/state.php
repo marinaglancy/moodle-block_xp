@@ -38,7 +38,6 @@ namespace block_xp\local\xp;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface state {
-
     /**
      * Get the ID of the thing.
      *
@@ -80,5 +79,4 @@ interface state {
      * @return int
      */
     public function get_xp_in_level();
-
 }

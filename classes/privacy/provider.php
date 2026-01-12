@@ -215,7 +215,6 @@ class provider implements
         $logs = [];
         $lastcourseid = null;
         foreach ($recordset as $record) {
-
             if ($lastcourseid && $lastcourseid != $record->courseid) {
                 $flushlogs($lastcourseid, $logs);
                 $logs = [];
@@ -459,22 +458,17 @@ class provider implements
             if ($name === 'block_xp_notices') {
                 $desc = get_string('privacy:metadata:prefnotices', 'block_xp');
                 $value = transform::yesno($value);
-
             } else if ($name === 'block_xp-generic-promo-page-seen') {
                 $desc = get_string('privacy:metadata:prefseenpromo', 'block_xp');
                 $value = transform::datetime($value);
-
             } else if ($name === 'block_xp-generic-ladder-pagesize') {
                 $desc = get_string('privacy:metadata:prefladderpagesize', 'block_xp');
-
             } else if (strpos($name, 'block_xp-notice-block_intro_') === 0) {
                 $desc = get_string('privacy:metadata:prefintro', 'block_xp');
                 $value = transform::yesno($value);
-
             } else if (strpos($name, 'block_xp_notify_level_up_') === 0) {
                 $desc = get_string('privacy:metadata:preflevelup', 'block_xp');
                 $value = transform::yesno($value);
-
             } else {
                 continue;
             }

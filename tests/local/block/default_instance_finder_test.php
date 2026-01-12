@@ -32,7 +32,6 @@ use Generator;
  * @covers     \block_xp\local\block\default_instance_finder
  */
 final class default_instance_finder_test extends base_testcase {
-
     /**
      * Provider.
      */
@@ -130,5 +129,4 @@ final class default_instance_finder_test extends base_testcase {
         $finder = new default_instance_finder(di::get('db'));
         $this->assertEquals($ninstances > 0, $finder->has_instance_in_context('xp', $contextmap[$checkin]));
     }
-
 }

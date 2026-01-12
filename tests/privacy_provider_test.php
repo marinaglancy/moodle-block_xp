@@ -56,7 +56,6 @@ use context_system;
  * @covers     \block_xp\privacy\provider
  */
 final class privacy_provider_test extends base_testcase {
-
     /**
      * Setup.
      */

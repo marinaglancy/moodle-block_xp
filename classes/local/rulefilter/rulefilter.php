@@ -39,7 +39,6 @@ use lang_string;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface rulefilter {
-
     /**
      * Get action tester.
      *
@@ -92,5 +91,4 @@ interface rulefilter {
      * @return bool
      */
     public function is_multiple_allowed(): bool;
-
 }

@@ -190,5 +190,4 @@ class leaderboard extends dynamic_form {
         }
         parent::set_data($data);
     }
-
 }

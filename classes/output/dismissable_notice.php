@@ -36,7 +36,6 @@ namespace block_xp\output;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class dismissable_notice extends notice {
-
     /** @var string The name. */
     public $name;
 
@@ -54,5 +53,4 @@ class dismissable_notice extends notice {
         parent::__construct($message, $type);
         $this->name = $name;
     }
-
 }

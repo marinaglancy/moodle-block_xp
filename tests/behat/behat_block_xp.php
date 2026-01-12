@@ -41,7 +41,6 @@ require_once(__DIR__ . '/../../../../lib/behat/behat_base.php');
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class behat_block_xp extends behat_base {
-
     /**
      * Resolve a page instance URL.
      *
@@ -286,5 +285,4 @@ class behat_block_xp extends behat_base {
     public function reset_caches() {
         \block_xp\di::set_container(new \block_xp\local\default_container());
     }
-
 }

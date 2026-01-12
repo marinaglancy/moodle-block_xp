@@ -36,7 +36,6 @@ namespace block_xp\local\strategy;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface event_collection_strategy extends collection_strategy {
-
     /**
      * Handle an event.
      *
@@ -44,5 +43,4 @@ interface event_collection_strategy extends collection_strategy {
      * @return void
      */
     public function collect_event(\core\event\base $event);
-
 }

@@ -36,7 +36,6 @@ namespace block_xp\local\userfilter;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class nobody implements user_filter {
-
     /**
      * Get the SQL fragment to filter users.
      *
@@ -45,5 +44,4 @@ class nobody implements user_filter {
     public function get_sql(string $useridalias): array {
         return ['1=0', []];
     }
-
 }

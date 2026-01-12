@@ -37,7 +37,6 @@ use moodle_database;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class course_filter_manager {
-
     /** @var int The course ID. */
     protected $courseid;
     /** @var moodle_database The DB. */
@@ -218,7 +217,8 @@ class course_filter_manager {
      * @return void
      */
     protected function import_filters(array $filters) {
-        $sortorder = (int) $this->db->get_field('block_xp_filters',
+        $sortorder = (int) $this->db->get_field(
+            'block_xp_filters',
             'COALESCE(MAX(sortorder), -1) + 1',
             ['courseid' => $this->courseid]
         );
@@ -275,5 +275,4 @@ class course_filter_manager {
         $this->db->delete_records('block_xp_filters', ['courseid' => $this->courseid, 'category' => $category]);
         $this->invalidate_filters_cache($category);
     }
-
 }

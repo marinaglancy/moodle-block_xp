@@ -36,12 +36,10 @@ namespace block_xp\local\activity;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface activity_with_xp extends activity {
-
     /**
      * The XP earned at this stage.
      *
      * @return int
      */
     public function get_xp();
-
 }

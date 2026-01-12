@@ -116,5 +116,4 @@ class user_xp extends dynamic_form {
 
         return $errors;
     }
-
 }

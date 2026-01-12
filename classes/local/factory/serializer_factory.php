@@ -40,7 +40,6 @@ use block_xp\local\serializer\url_serializer;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class serializer_factory {
-
     /**
      * Get the serializer.
      */
@@ -54,5 +53,4 @@ class serializer_factory {
     public function get_level_serializer() {
         return new level_serializer(new url_serializer());
     }
-
 }

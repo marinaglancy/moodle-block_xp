@@ -36,7 +36,6 @@ namespace block_xp\local\logger;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface collection_logger_with_id_reset {
-
     /**
      * Purge logs by ID.
      *
@@ -44,5 +43,4 @@ interface collection_logger_with_id_reset {
      * @return void
      */
     public function reset_by_id($id);
-
 }

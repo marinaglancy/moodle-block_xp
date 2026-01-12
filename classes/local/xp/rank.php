@@ -36,7 +36,6 @@ namespace block_xp\local\xp;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface rank {
-
     /**
      * Get the rank of the state.
      *
@@ -50,5 +49,4 @@ interface rank {
      * @return state
      */
     public function get_state();
-
 }

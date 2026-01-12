@@ -30,7 +30,6 @@ use block_xp\local\routing\url;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class admin_settings_controller extends admin_route_controller {
-
     /** @var string The section name. */
     protected $sectionname = 'block_xp_default_settingspage';
 
@@ -86,5 +85,4 @@ class admin_settings_controller extends admin_route_controller {
             return;
         }
     }
-
 }

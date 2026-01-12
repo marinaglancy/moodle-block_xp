@@ -38,7 +38,6 @@ use block_xp\local\backup\restore_context;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface rulefilter_with_update_after_restore extends rulefilter {
-
     /**
      * Update config after restore.
      *
@@ -47,5 +46,4 @@ interface rulefilter_with_update_after_restore extends rulefilter {
      * @return object The updated config.
      */
     public function update_config_after_restore(restore_context $context, object $config): object;
-
 }

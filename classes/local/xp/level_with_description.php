@@ -36,12 +36,10 @@ namespace block_xp\local\xp;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface level_with_description extends level {
-
     /**
      * Get the description of the level.
      *
      * @return string
      */
     public function get_description();
-
 }

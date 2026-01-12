@@ -35,7 +35,6 @@ use restore_dbops;
  * @covers     \block_xp\local\backup\xpladder_decode_rule
  */
 final class xpladder_decode_rule_test extends base_testcase {
-
     /**
      * Encoding provider.
      *
@@ -126,5 +125,4 @@ final class xpladder_decode_rule_test extends base_testcase {
         backup_controller_dbops::drop_backup_ids_temp_table('abc');
         $this->assertEquals($expected, $result);
     }
-
 }

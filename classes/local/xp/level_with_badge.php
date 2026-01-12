@@ -36,12 +36,10 @@ namespace block_xp\local\xp;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface level_with_badge extends level {
-
     /**
      * Get the badge URL.
      *
      * @return moodle_url|null
      */
     public function get_badge_url();
-
 }

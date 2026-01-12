@@ -40,7 +40,6 @@ use block_xp\task\post_deactivation_adhoc;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class addon {
-
     /**
      * Get the expected release version.
      *
@@ -261,5 +260,4 @@ class addon {
         }
         return true;
     }
-
 }

@@ -38,7 +38,6 @@ use block_xp\local\ruletype\ruletype;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface resolver {
-
     /**
      * Get type by name.
      *
@@ -54,5 +53,4 @@ interface resolver {
      * @return string
      */
     public function get_type_name(ruletype $type): string;
-
 }

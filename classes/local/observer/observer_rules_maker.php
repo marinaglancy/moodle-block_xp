@@ -36,7 +36,6 @@ namespace block_xp\local\observer;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface observer_rules_maker {
-
     /**
      * Get the rules.
      *
@@ -46,5 +45,4 @@ interface observer_rules_maker {
      * @return array
      */
     public function get_observer_rules();
-
 }

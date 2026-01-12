@@ -43,7 +43,6 @@ use stdClass;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class table_row_config implements config {
-
     /** @var moodle_database The DB. */
     protected $db;
     /** @var string The table. */

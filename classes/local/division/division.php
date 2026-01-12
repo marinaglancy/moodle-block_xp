@@ -29,7 +29,6 @@ use block_xp\local\userfilter\user_filter;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface division {
-
     /**
      * Get the ID.
      *
@@ -50,5 +49,4 @@ interface division {
      * @return user_filter
      */
     public function get_user_filter(): user_filter;
-
 }

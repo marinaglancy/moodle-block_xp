@@ -32,7 +32,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_xp_ruleset extends block_xp_rule {
-
     /** All rules should match. */
     const ALL = 'all';
     /** Any rule should match. */

@@ -32,8 +32,6 @@ use Generator;
  * @covers     \block_xp\local\block\course_block
  */
 final class instance_test extends base_testcase {
-
-
     /**
      * Setup the blocks.
      *
@@ -147,5 +145,4 @@ final class instance_test extends base_testcase {
         $config = $this->get_world($contextmap[$checkin]->instanceid)->get_config();
         $this->assertEquals($enabled, (bool) $config->get('enabled'));
     }
-
 }

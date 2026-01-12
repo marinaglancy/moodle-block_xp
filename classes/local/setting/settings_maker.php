@@ -36,7 +36,6 @@ namespace block_xp\local\setting;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface settings_maker {
-
     /**
      * Get the settings.
      *
@@ -47,5 +46,4 @@ interface settings_maker {
      * @return part_of_admin_tree|null
      */
     public function get_settings(environment $env);
-
 }

@@ -38,7 +38,6 @@ use block_xp\local\world;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface context_world_factory {
-
     /**
      * Get the world.
      *
@@ -46,5 +45,4 @@ interface context_world_factory {
      * @return world
      */
     public function get_world_from_context(\context $context): world;
-
 }

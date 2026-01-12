@@ -43,7 +43,6 @@ use block_xp\tests\base_testcase;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class leaderboard_factory_test extends base_testcase {
-
     /**
      * Test the plain factory.
      *
@@ -660,5 +659,4 @@ final class leaderboard_factory_test extends base_testcase {
         }
         $this->assertEquals($i, count($expected));
     }
-
 }

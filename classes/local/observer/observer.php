@@ -34,7 +34,6 @@ namespace block_xp\local\observer;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class observer {
-
     /**
      * Act when a course is deleted.
      *
@@ -79,5 +78,4 @@ class observer {
             $cs->collect_event($event);
         }
     }
-
 }

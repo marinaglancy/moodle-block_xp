@@ -45,7 +45,6 @@ use moodle_database;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class global_collection_logger implements collection_logger {
-
     /** The table name. */
     const TABLE = 'block_xp_log';
 
@@ -98,5 +97,4 @@ class global_collection_logger implements collection_logger {
     public function reset() {
         // Unlikely that this was intentional, so we do nothing.
     }
-
 }

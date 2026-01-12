@@ -36,7 +36,6 @@ namespace block_xp\local\controller;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface controller {
-
     /**
      * Handle the request.
      *
@@ -44,5 +43,4 @@ interface controller {
      * @return void
      */
     public function handle(\block_xp\local\routing\request $request);
-
 }

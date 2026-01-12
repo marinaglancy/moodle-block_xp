@@ -36,7 +36,6 @@ namespace block_xp\local\routing;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class route {
-
     /** @var route_definition Route definition. */
     protected $definition;
 
@@ -74,5 +73,4 @@ class route {
     public function get_params() {
         return $this->params;
     }
-
 }

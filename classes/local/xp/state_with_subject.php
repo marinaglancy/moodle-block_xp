@@ -40,7 +40,6 @@ use moodle_url;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface state_with_subject extends state {
-
     /**
      * Get the link to the subject.
      *
@@ -61,5 +60,4 @@ interface state_with_subject extends state {
      * @return moodle_url|null
      */
     public function get_picture();
-
 }

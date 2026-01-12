@@ -38,7 +38,6 @@ use coding_exception;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 abstract class course_route_controller extends route_controller {
-
     /** @var stdClass The course. */
     protected $course;
     /** @var int The course ID. */
@@ -181,5 +180,4 @@ abstract class course_route_controller extends route_controller {
         }
         echo groups_print_course_menu($this->get_course(), $this->pageurl->get_compatible_url());
     }
-
 }

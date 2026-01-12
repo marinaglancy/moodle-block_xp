@@ -32,7 +32,6 @@ use moodle_url;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class addon_compatibility extends \core\check\check {
-
     /**
      * Get the short check name.
      *
@@ -85,5 +84,4 @@ class addon_compatibility extends \core\check\check {
 
         return $noissues;
     }
-
 }

@@ -36,7 +36,6 @@ namespace block_xp\local\routing;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class default_routes_config extends static_routes_config {
-
     /**
      * Constructor.
      */
@@ -218,5 +217,4 @@ class default_routes_config extends static_routes_config {
 
         parent::__construct($routes);
     }
-
 }

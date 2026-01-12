@@ -31,7 +31,6 @@ use moodle_database;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class table_setter_config implements config {
-
     /** @var array The columns. */
     protected $columns;
     /** @var moodle_database The DB. */
@@ -96,5 +95,4 @@ class table_setter_config implements config {
             $this->set($name, $value);
         }
     }
-
 }

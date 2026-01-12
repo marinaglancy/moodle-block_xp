@@ -28,7 +28,6 @@ use block_xp\di;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_xp_generator extends \testing_block_generator {
-
     /**
      * Reset process.
      *
@@ -88,5 +87,4 @@ class block_xp_generator extends \testing_block_generator {
         $world = di::get('context_world_factory')->get_world_from_context($context);
         $world->get_store()->increase($data->userid, $data->xp);
     }
-
 }

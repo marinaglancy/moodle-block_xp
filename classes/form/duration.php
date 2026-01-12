@@ -49,7 +49,6 @@ require_once($CFG->libdir . '/form/duration.php');
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_xp_form_duration extends \MoodleQuickForm_duration {
-
     /** @var array Options. */
     protected $_options = ['defaultunit' => 60, 'maxunit' => HOURSECS, 'optional' => false];
     /** @var array The units. */
@@ -131,7 +130,6 @@ class block_xp_form_duration extends \MoodleQuickForm_duration {
         }
         return [$seconds, 1];
     }
-
 }
 
 // Auto register the element.

@@ -41,7 +41,6 @@ use moodle_url;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class rule extends dynamic_form {
-
     /** @var object The rule record. */
     protected $rule;
 
@@ -122,5 +121,4 @@ class rule extends dynamic_form {
 
         return $errors;
     }
-
 }

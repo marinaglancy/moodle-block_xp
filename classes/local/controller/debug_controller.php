@@ -38,7 +38,6 @@ use coding_exception;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class debug_controller extends route_controller {
-
     /**
      * Authentication.
      *
@@ -142,5 +141,4 @@ class debug_controller extends route_controller {
 
         echo '</pre>';
     }
-
 }

@@ -39,7 +39,6 @@ use block_xp\local\backup\restore_context;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class restore_context_mock extends restore_context {
-
     /** @var object The data. */
     protected $data;
 
@@ -125,5 +124,4 @@ class restore_context_mock extends restore_context {
     public function is_same_site() {
         return (bool) ($this->data->samesite ?? true);
     }
-
 }

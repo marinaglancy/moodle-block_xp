@@ -41,7 +41,6 @@ use context_system;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class world_factory_test extends base_testcase {
-
     /**
      * Test course world factory.
      *
@@ -175,5 +174,4 @@ final class world_factory_test extends base_testcase {
         $this->assertSame($w0, $w1);
         $this->assertSame($w1, $w2);
     }
-
 }

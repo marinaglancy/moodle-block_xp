@@ -40,7 +40,6 @@ use restore_structure_step;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class restore_context {
-
     /** @var restore_structure_step The step. */
     protected $step;
 
@@ -148,5 +147,4 @@ class restore_context {
     public static function from_structure_step($step) {
         return new static($step);
     }
-
 }

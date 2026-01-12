@@ -38,7 +38,6 @@ use block_xp\di;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class set_default_levels_info extends external_api {
-
     /**
      * External function parameters.
      *
@@ -112,5 +111,4 @@ class set_default_levels_info extends external_api {
             'success' => new external_value(PARAM_BOOL),
         ]);
     }
-
 }

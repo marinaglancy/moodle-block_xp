@@ -38,7 +38,6 @@ use moodle_url;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class full_anonymiser implements state_anonymiser {
-
     /** @var string The name to use. */
     protected $altname;
     /** @var moodle_url The name to use. */
@@ -81,5 +80,4 @@ class full_anonymiser implements state_anonymiser {
 
         return new anonymised_state($state, $this->altname, $this->altpic);
     }
-
 }

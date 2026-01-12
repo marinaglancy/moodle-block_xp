@@ -43,7 +43,6 @@ namespace block_xp\local\config;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class admin_config extends mdl_config {
-
     /** @var config The defaults. */
     private $defaults;
 
@@ -123,5 +122,4 @@ class admin_config extends mdl_config {
         }
         parent::set_many($values);
     }
-
 }

@@ -36,7 +36,6 @@ namespace block_xp\local\config;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface config {
-
     /**
      * Get a value.
      *
@@ -77,5 +76,4 @@ interface config {
      * @throws coding_exception When a value is not scalar.
      */
     public function set_many(array $values);
-
 }

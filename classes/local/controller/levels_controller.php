@@ -40,7 +40,6 @@ use block_xp\local\serializer\url_serializer;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class levels_controller extends page_controller {
-
     /** @var string The route name. */
     protected $routename = 'levels';
 
@@ -129,5 +128,4 @@ class levels_controller extends page_controller {
 
     protected function page_danger_zone_content() {
     }
-
 }

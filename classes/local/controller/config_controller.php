@@ -38,7 +38,6 @@ use html_writer;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class config_controller extends page_controller {
-
     /** @var string The route name. */
     protected $routename = 'config';
     /** @var moodleform The form. */
@@ -116,5 +115,4 @@ class config_controller extends page_controller {
             echo html_writer::tag('p', html_writer::tag('small', get_string('notesomesettingslocked', 'block_xp')));
         }
     }
-
 }

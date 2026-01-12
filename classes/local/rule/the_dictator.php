@@ -40,7 +40,6 @@ use moodle_database;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class the_dictator implements dictator {
-
     /** @var moodle_database The database. */
     protected $db;
     /** @var handler The filter provider. */
@@ -261,5 +260,4 @@ class the_dictator implements dictator {
 
         return $rules;
     }
-
 }

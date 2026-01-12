@@ -45,7 +45,6 @@ use moodle_exception;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class router {
-
     /** @var url_resolver_interface The URL resolver. */
     protected $urlresolver;
     /** @var controller_resolver The controller resolver. */
@@ -98,5 +97,4 @@ class router {
 
         return new $class();
     }
-
 }

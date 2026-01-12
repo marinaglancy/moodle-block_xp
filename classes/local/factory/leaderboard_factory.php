@@ -39,7 +39,6 @@ use block_xp\local\leaderboard\leaderboard;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface leaderboard_factory {
-
     /**
      * Get the leaderboard.
      *
@@ -53,5 +52,4 @@ interface leaderboard_factory {
      * @param division $division The division.
      */
     public function get_leaderboard_for_division(division $division): leaderboard;
-
 }

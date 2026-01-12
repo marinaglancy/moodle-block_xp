@@ -40,7 +40,6 @@ use core_privacy\local\request\userlist;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface addon_userlist_provider extends shared_data_provider {
-
     /**
      * Add the list of users who have data within a context.
      *
@@ -54,5 +53,4 @@ interface addon_userlist_provider extends shared_data_provider {
      * @param approved_userlist $userlist The user list.
      */
     public static function delete_addon_data_for_users(approved_userlist $userlist);
-
 }

@@ -38,7 +38,6 @@ use context;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface block_file_server {
-
     /**
      * Serve a file.
      *
@@ -52,5 +51,4 @@ interface block_file_server {
      * @return void
      */
     public function serve_block_file($course, $bi, context $context, $filearea, $args, $forcedownload, array $options = []);
-
 }

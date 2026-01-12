@@ -39,7 +39,6 @@ use lang_string;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class any implements rulefilter {
-
     public function get_action_tester(context $effectivecontext, object $config): action_tester {
         return new any_tester();
     }
@@ -67,5 +66,4 @@ class any implements rulefilter {
     public function is_multiple_allowed(): bool {
         return false;
     }
-
 }

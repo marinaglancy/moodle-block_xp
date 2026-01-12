@@ -36,7 +36,6 @@ use block_xp\local\rulefilter\rulefilter_with_update_after_restore;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class restore_xp_block_structure_step extends restore_structure_step {
-
     /**
      * Execution conditions.
      *
@@ -146,11 +145,9 @@ class restore_xp_block_structure_step extends restore_structure_step {
 
         // We must never have more than one category grades rule, and it should be a ruleset.
         if (!empty($data['category']) && $data['category'] == block_xp_filter::CATEGORY_GRADES) {
-
             // If there is only rule, and its empty, then we restore on top of it.
             $records = $DB->get_records('block_xp_filters', ['courseid' => $data['courseid'], 'category' => $data['category']]);
             if (count($records) === 1) {
-
                 $record = reset($records);
                 $filter = block_xp_filter::load_from_data($record);
                 $rule = $filter->get_rule();
@@ -166,13 +163,11 @@ class restore_xp_block_structure_step extends restore_structure_step {
                     // Update the record.
                     $DB->update_record('block_xp_filters', ['id' => $record->id] + $data);
                     return;
-
                 } else {
                     // It really should be a ruleset, odd, let's just pass.
                     $this->log("block_xp: grades rules not restored, existing grade rules found", backup::LOG_DEBUG);
                     return;
                 }
-
             } else if (count($records) > 1) {
                 // It's safer to ignore this.
                 $this->log("block_xp: grades rules not restored, multiple existing grade rules found", backup::LOG_DEBUG);
@@ -230,7 +225,8 @@ class restore_xp_block_structure_step extends restore_structure_step {
             $context = $this->get_task()->get_course_context();
             $testoptions = ['type' => $data['type'], 'filter' => $data['filter']];
             if ($dictator->count_rules_in_context($context, null, $testoptions) > 0) {
-                $this->log("block_xp: Skipping disallowed multiple rules for '{$data['type']}/{$data['filter']}'",
+                $this->log(
+                    "block_xp: Skipping disallowed multiple rules for '{$data['type']}/{$data['filter']}'",
                     backup::LOG_DEBUG
                 );
                 return;
@@ -293,7 +289,6 @@ class restore_xp_block_structure_step extends restore_structure_step {
 
             $rules = $dictator->get_rules_in_context($restorecontext->get_course_context());
             foreach ($rules as $rule) {
-
                 // Check that this was restored just then.
                 $oldid = $restorecontext->get_mapping_id('block_xp_rule_oldid', $rule->get_id());
                 if ($oldid === null) {
@@ -347,5 +342,4 @@ class restore_xp_block_structure_step extends restore_structure_step {
             $this->log("block_xp: Could not invalidate filter cache", backup::LOG_DEBUG);
         }
     }
-
 }

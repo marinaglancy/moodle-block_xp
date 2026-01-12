@@ -38,7 +38,6 @@ use block_xp\local\action\action;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class any_tester implements action_tester {
-
     /**
      * Whether the action is passing the constraints.
      *
@@ -48,5 +47,4 @@ class any_tester implements action_tester {
     public function is_action_passing_constraints(action $action): bool {
         return true;
     }
-
 }

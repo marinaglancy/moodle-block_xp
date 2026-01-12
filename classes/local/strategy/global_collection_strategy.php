@@ -39,7 +39,6 @@ use block_xp\local\utils\user_utils;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class global_collection_strategy implements event_collection_strategy {
-
     /** @var array Contexts allowed. */
     protected $allowedcontexts = [];
     /** @var course_world_factory The course factory. */
@@ -96,5 +95,4 @@ class global_collection_strategy implements event_collection_strategy {
             $strategy->collect_event($event);
         }
     }
-
 }

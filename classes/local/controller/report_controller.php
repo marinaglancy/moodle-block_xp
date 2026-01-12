@@ -45,7 +45,6 @@ use core_table\local\filter\string_filter;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class report_controller extends page_controller {
-
     /** @var bool Requires a wide view. */
     protected $iswideview = true;
     /** @var bool The page supports groups. */
@@ -321,5 +320,4 @@ class report_controller extends page_controller {
             'hiddenfields' => $formfields,
         ]);
     }
-
 }

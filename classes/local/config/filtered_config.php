@@ -38,7 +38,6 @@ use coding_exception;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class filtered_config extends proxy_config {
-
     /** @var array Array where keys are allowed to be read. */
     private $allowedkeys = [];
     /** @var array Array where keys are keys to exclude. */

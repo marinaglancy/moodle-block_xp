@@ -40,7 +40,6 @@ use html_writer;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 abstract class route_controller implements controller {
-
     /** @var \block_xp\local\request The request. */
     protected $request;
     /** @var url The page URL, not relative to the router. */

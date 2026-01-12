@@ -40,7 +40,6 @@ use block_xp\local\rulefilter\rulefilter;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class default_handler implements handler {
-
     /** @var (rulefilter|false)[] The filters cache. */
     protected $filters = [];
     /** @var array The filter names. */
@@ -138,5 +137,4 @@ class default_handler implements handler {
     protected function make_filters_list_with_priority(): array {
         return ['any' => 0];
     }
-
 }

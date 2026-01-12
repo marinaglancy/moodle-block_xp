@@ -40,7 +40,6 @@ use block_xp\local\routing\url;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class admin_rules_controller extends admin_route_controller {
-
     /** @var string The section name. */
     protected $sectionname = 'block_xp_default_rules';
     /** @var array Existing filters. */
@@ -80,7 +79,6 @@ class admin_rules_controller extends admin_route_controller {
             require_sesskey();
             $this->handle_save();
             $this->redirect(null, get_string('changessaved'));
-
         } else if (!empty($_POST['cancel'])) {
             $this->redirect();
         }
@@ -237,7 +235,6 @@ class admin_rules_controller extends admin_route_controller {
                 ['confirmlabel' => get_string('revert', 'core')]
             );
             return;
-
         } else if ($this->get_param('reset')) {
             echo $output->confirm_reset(
                 get_string('resetallcoursestodefaults', 'block_xp'),
@@ -260,24 +257,24 @@ class admin_rules_controller extends admin_route_controller {
 
         // Revert button.
         if ($this->filtermanager->is_customised()) {
-
             echo html_writer::tag('p', get_string('reverttopluginsdefaultsintro', 'block_xp'));
             $url = new url($this->pageurl, ['revert' => 1, 'sesskey' => sesskey()]);
-            echo html_writer::tag('p',
+            echo html_writer::tag(
+                'p',
                 $output->render($output->make_single_button(
                     $url->get_compatible_url(),
                     get_string('reverttopluginsdefaults', 'block_xp'),
                     ['danger' => true]
                 ))
             );
-
         }
 
         // Reset courses.
         if (!$forwholesite) {
             echo html_writer::tag('p', markdown_to_html(get_string('resetallcoursestodefaultsintro', 'block_xp')));
             $url = new url($this->pageurl, ['reset' => 1, 'sesskey' => sesskey()]);
-            echo html_writer::tag('p',
+            echo html_writer::tag(
+                'p',
                 $output->render($output->make_single_button(
                     $url->get_compatible_url(),
                     get_string('resetallcoursestodefaults', 'block_xp'),
@@ -286,5 +283,4 @@ class admin_rules_controller extends admin_route_controller {
             );
         }
     }
-
 }

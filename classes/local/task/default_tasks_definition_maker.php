@@ -36,7 +36,6 @@ namespace block_xp\local\task;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class default_tasks_definition_maker implements tasks_definition_maker {
-
     /**
      * Get the tasks definition.
      */
@@ -81,5 +80,4 @@ class default_tasks_definition_maker implements tasks_definition_maker {
             ],
         ];
     }
-
 }

@@ -43,7 +43,6 @@ use html_writer;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class ladder_controller extends page_controller {
-
     /** Page size flag. */
     const PAGE_SIZE_FLAG = 'ladder-pagesize';
 
@@ -166,7 +165,6 @@ class ladder_controller extends page_controller {
             if (!empty($pagesizepref)) {
                 $indicator->unset_user_flag($USER->id, self::PAGE_SIZE_FLAG);
             }
-
         } else if ($pagesize != $pagesizepref) {
             // It's not the default, and it's not our flag, save the flag.
             $indicator->set_user_flag($USER->id, self::PAGE_SIZE_FLAG, $pagesize);
@@ -250,5 +248,4 @@ class ladder_controller extends page_controller {
             ] : null,
         ]);
     }
-
 }

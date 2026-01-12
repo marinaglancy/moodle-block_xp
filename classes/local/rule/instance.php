@@ -36,7 +36,6 @@ namespace block_xp\local\rule;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface instance {
-
     /**
      * Get the ID.
      *
@@ -85,5 +84,4 @@ interface instance {
      * @return object
      */
     public function get_filter_config(): object;
-
 }

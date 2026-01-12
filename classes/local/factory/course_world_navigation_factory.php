@@ -38,7 +38,6 @@ use block_xp\local\course_world;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface course_world_navigation_factory {
-
     /**
      * Get the navigation.
      *
@@ -55,5 +54,4 @@ interface course_world_navigation_factory {
      * @return array
      */
     public function get_course_navigation(course_world $world);
-
 }

@@ -38,7 +38,6 @@ use coding_exception;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class static_routes_config implements routes_config {
-
     /** @var array Routes. */
     protected $routes;
 
@@ -75,5 +74,4 @@ class static_routes_config implements routes_config {
     public function get_routes() {
         return $this->routes;
     }
-
 }

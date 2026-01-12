@@ -79,5 +79,4 @@ class info extends dynamic_form {
         $mform->addElement('editor', 'instructions', get_string('instructions', 'block_xp'), ['rows' => 10]);
         $mform->addHelpButton('instructions', 'instructions', 'block_xp');
     }
-
 }

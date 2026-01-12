@@ -36,7 +36,6 @@ namespace block_xp\local\permission;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface access_logs_permissions {
-
     /**
      * Whether the user can access the logs.
      *
@@ -52,5 +51,4 @@ interface access_logs_permissions {
      * @throws required_capability_exception
      */
     public function require_access_logs($userid = null);
-
 }

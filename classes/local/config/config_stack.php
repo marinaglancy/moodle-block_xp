@@ -38,7 +38,6 @@ use coding_exception;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class config_stack implements config {
-
     /** @var config[] Configs. */
     protected $stack;
 
@@ -130,5 +129,4 @@ class config_stack implements config {
             $this->set($key, $value);
         }
     }
-
 }

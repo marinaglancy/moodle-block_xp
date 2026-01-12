@@ -29,7 +29,6 @@ use block_xp\di;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class admin_notices extends \core\task\scheduled_task {
-
     /**
      * Get name.
      *
@@ -150,5 +149,4 @@ class admin_notices extends \core\task\scheduled_task {
             return;
         }
     }
-
 }

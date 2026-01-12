@@ -46,7 +46,6 @@ use block_xp\local\routing\url;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class visuals_controller extends page_controller {
-
     /** @var string The nav name. */
     protected $navname = 'levels';
     /** @var string The route name. */
@@ -121,7 +120,6 @@ class visuals_controller extends page_controller {
             $this->save_form_data($data);
             // TODO Add a confirmation message.
             $this->redirect();
-
         } else if ($form->is_cancelled()) {
             $this->redirect();
         }
@@ -138,7 +136,8 @@ class visuals_controller extends page_controller {
 
         // If the badges are missing, we copy them now.
         if ($config->get('enablecustomlevelbadges') == course_world_config::CUSTOM_BADGES_MISSING) {
-            file_prepare_draft_area($draftitemid,
+            file_prepare_draft_area(
+                $draftitemid,
                 context_system::instance()->id,
                 'block_xp',
                 'defaultbadges',
@@ -146,7 +145,8 @@ class visuals_controller extends page_controller {
                 $this->get_filemanager_options()
             );
         } else {
-            file_prepare_draft_area($draftitemid,
+            file_prepare_draft_area(
+                $draftitemid,
                 $this->get_filemanager_context()->id,
                 'block_xp',
                 'badges',
@@ -181,7 +181,8 @@ class visuals_controller extends page_controller {
         $config = $this->world->get_config();
 
         // Save the area.
-        file_save_draft_area_files($data->badges,
+        file_save_draft_area_files(
+            $data->badges,
             $this->get_filemanager_context()->id,
             'block_xp',
             'badges',
@@ -257,5 +258,4 @@ class visuals_controller extends page_controller {
      */
     protected function intro() {
     }
-
 }

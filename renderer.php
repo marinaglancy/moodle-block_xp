@@ -41,7 +41,6 @@ use block_xp\output\xp_widget;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_xp_renderer extends plugin_renderer_base {
-
     /** Notice flag. */
     const NOTICE_FLAG_QUEST = 'block_xp_notice_quest';
 
@@ -197,7 +196,8 @@ class block_xp_renderer extends plugin_renderer_base {
      */
     public function heading_with_divider($text, $options = []) {
         $options = array_merge(['level' => 3], $options);
-        return html_writer::tag('div',
+        return html_writer::tag(
+            'div',
             $this->heading($text, $options['level'], 'xp-m-0'),
             ['class' => 'xp-mb-6 xp-mt-8 xp-border-0 xp-border-solid xp-border-t xp-border-gray-100 xp-pt-8']
         );
@@ -411,7 +411,6 @@ class block_xp_renderer extends plugin_renderer_base {
                         notice.style.display = 'none';
                     });
                 });");
-
             } else {
                 require_once($CFG->libdir . '/ajax/ajaxlib.php');
                 user_preference_allow_ajax_update($flag, PARAM_BOOL);
@@ -438,7 +437,8 @@ class block_xp_renderer extends plugin_renderer_base {
             $text .= html_writer::div($actionicon, 'xp-grow-0 dismiss-action');
             $text .= html_writer::end_div();
 
-            $o .= html_writer::div($this->notification_without_close($text, 'success'),
+            $o .= html_writer::div(
+                $this->notification_without_close($text, 'success'),
                 'block_xp-dismissable-notice block-xp-notices'
             );
         }
@@ -569,7 +569,6 @@ class block_xp_renderer extends plugin_renderer_base {
      */
     public function notification_without_close($message, $type) {
         if (class_exists('core\output\notification')) {
-
             // Of course, it would be too easy if they didn't add and change constants
             // between two releases... Who reads the upgrade.txt, seriously?
             if (defined('core\output\notification::NOTIFY_INFO')) {
@@ -720,7 +719,8 @@ class block_xp_renderer extends plugin_renderer_base {
             $content .= html_writer::start_div('xp-flex xp-min-h-10 xp-group');
 
             $content .= html_writer::start_div('xp-flex-none xp-h-10 xp-flex xp-items-center');
-            $content .= $this->render(new pix_icon('i/dragdrop',
+            $content .= $this->render(new pix_icon(
+                'i/dragdrop',
                 get_string('moverule', 'block_xp'),
                 '',
                 ['class' => 'iconsmall filter-move']
@@ -729,7 +729,8 @@ class block_xp_renderer extends plugin_renderer_base {
 
             $content .= html_writer::start_div('xp-flex-1 xp-overflow-hidden xp-min-h-full xp-flex'
                 . ' xp-items-center xp-leading-tight');
-            $content .= get_string('awardaxpwhen',
+            $content .= get_string(
+                'awardaxpwhen',
                 'block_xp',
                 html_writer::empty_tag('input', [
                     'type' => 'text',
@@ -756,7 +757,6 @@ class block_xp_renderer extends plugin_renderer_base {
                     'value' => $filter->get_sortorder(),
                     'name' => $basename . '[sortorder]', ]);
             $basename .= '[rule]';
-
         } else {
             $o .= html_writer::tag('p', get_string('awardaxpwhen', 'block_xp', $filter->get_points()));
         }
@@ -783,7 +783,8 @@ class block_xp_renderer extends plugin_renderer_base {
             $content .= html_writer::start_div('xp-flex xp-min-h-10');
 
             $content .= html_writer::start_div('xp-flex-none xp-h-10 xp-flex xp-items-center');
-            $content .= $this->render(new pix_icon('i/dragdrop',
+            $content .= $this->render(new pix_icon(
+                'i/dragdrop',
                 get_string('movecondition', 'block_xp'),
                 '',
                 ['class' => 'iconsmall rule-move']
@@ -828,7 +829,8 @@ class block_xp_renderer extends plugin_renderer_base {
             $content .= html_writer::start_div('xp-flex xp-min-h-10');
 
             $content .= html_writer::start_div('xp-flex-none xp-h-10 xp-flex xp-items-center');
-            $content .= $this->render(new pix_icon('i/dragdrop',
+            $content .= $this->render(new pix_icon(
+                'i/dragdrop',
                 get_string('movecondition', 'block_xp'),
                 '',
                 ['class' => 'iconsmall rule-move']
@@ -858,7 +860,8 @@ class block_xp_renderer extends plugin_renderer_base {
         }
         if ($iseditable) {
             $o .= html_writer::start_tag('li', ['class' => 'rule-add']);
-            $o .= $this->action_link('#',
+            $o .= $this->action_link(
+                '#',
                 get_string('addacondition', 'block_xp'),
                 null,
                 null,
@@ -923,7 +926,8 @@ EOT
         $actionicon = $this->action_icon('#', $icon, null);
         $text = html_writer::div($actionicon, 'dismiss-action') . $notice->message;
 
-        return html_writer::div($this->notification_without_close($text, $notice->type),
+        return html_writer::div(
+            $this->notification_without_close($text, $notice->type),
             'block_xp-dismissable-notice ' . $id
         );
     }
@@ -966,7 +970,8 @@ EOT
         $addlink = '';
         if ($widget->editable) {
             $addlink = html_writer::start_tag('li', ['class' => 'filter-add']);
-            $addlink .= $this->action_link('#',
+            $addlink .= $this->action_link(
+                '#',
                 get_string('addarule', 'block_xp'),
                 null,
                 null,
@@ -1347,5 +1352,4 @@ EOT
         $o .= html_writer::end_tag('nav');
         return $o;
     }
-
 }

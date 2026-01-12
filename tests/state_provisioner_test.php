@@ -38,7 +38,6 @@ use context_system;
  * @covers     \block_xp\local\xp\course_user_state_provisioner
  */
 final class state_provisioner_test extends base_testcase {
-
     /**
      * Provider.
      *

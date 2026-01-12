@@ -39,7 +39,6 @@ namespace block_xp\local;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface container {
-
     /**
      * Get a thing.
      *
@@ -56,5 +55,4 @@ interface container {
      * @return bool
      */
     public function has($id);
-
 }

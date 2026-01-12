@@ -46,7 +46,6 @@ use block_xp\tests\base_testcase;
  * @covers     \block_xp\local\local\course_world
  */
 final class course_world_test extends base_testcase {
-
     public function test_reset_data(): void {
         global $DB;
 
@@ -273,7 +272,8 @@ final class course_world_test extends base_testcase {
             ]),
             new default_course_world_config(),
         ]);
-        $world = new course_world($config,
+        $world = new course_world(
+            $config,
             $DB,
             1,
             di::get('badge_url_resolver_course_world_factory'),
@@ -307,7 +307,8 @@ final class course_world_test extends base_testcase {
             ]),
             new default_course_world_config(),
         ]);
-        $world = new course_world($config,
+        $world = new course_world(
+            $config,
             $DB,
             1,
             di::get('badge_url_resolver_course_world_factory'),
@@ -338,5 +339,4 @@ final class course_world_test extends base_testcase {
         $this->assertEquals('', $levelsinfo->get_level(1)->get_name());
         $this->assertEquals('', $levelsinfo->get_level(1)->get_description());
     }
-
 }

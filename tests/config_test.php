@@ -48,7 +48,6 @@ use xmldb_table;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class config_test extends base_testcase {
-
     /**
      * Test MDL locked config.
      *
@@ -383,5 +382,4 @@ final class config_test extends base_testcase {
 
         $dbman->create_table($table);
     }
-
 }

@@ -38,7 +38,6 @@ use block_xp\di;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class mark_popup_notification_seen extends external_api {
-
     /**
      * External function parameters.
      *
@@ -97,5 +96,4 @@ class mark_popup_notification_seen extends external_api {
     public static function execute_returns() {
         return new external_value(PARAM_BOOL);
     }
-
 }

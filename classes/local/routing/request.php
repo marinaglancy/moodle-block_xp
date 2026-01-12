@@ -36,7 +36,6 @@ namespace block_xp\local\routing;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface request {
-
     /**
      * Return the HTTP method.
      *
@@ -53,5 +52,4 @@ interface request {
      * @return url
      */
     public function get_url();
-
 }

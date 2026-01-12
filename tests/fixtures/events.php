@@ -30,7 +30,6 @@ namespace block_xp\event;
  * Something happened.
  */
 class something_happened extends \core\event\base {
-
     /**
      * Init.
      */

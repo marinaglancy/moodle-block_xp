@@ -41,7 +41,6 @@ use moodleform;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class promo extends moodleform {
-
     /**
      * Definition.
      */
@@ -52,5 +51,4 @@ class promo extends moodleform {
         $mform->addElement('static', '', '', markdown_to_html(get_string('wewillreplyat', 'block_xp', $USER->email)));
         $this->add_action_buttons(false, get_string('send', 'block_xp'));
     }
-
 }

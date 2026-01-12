@@ -41,7 +41,6 @@ require_once($CFG->dirroot . '/badges/lib/awardlib.php');
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class badge_manager {
-
     /** @var \moodle_database The DB. */
     protected $db;
 

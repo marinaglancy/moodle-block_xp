@@ -33,7 +33,6 @@ use context_course;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class group_division implements division {
-
     /**
      * The group ID.
      *
@@ -86,5 +85,4 @@ class group_division implements division {
         }
         return new group_members($this->groupid);
     }
-
 }

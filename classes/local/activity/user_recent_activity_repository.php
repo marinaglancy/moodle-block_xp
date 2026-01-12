@@ -36,7 +36,6 @@ namespace block_xp\local\activity;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface user_recent_activity_repository {
-
     /**
      * Get the recent user's activity.
      *
@@ -45,5 +44,4 @@ interface user_recent_activity_repository {
      * @return activity
      */
     public function get_user_recent_activity($userid, $count = 0);
-
 }

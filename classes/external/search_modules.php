@@ -40,7 +40,6 @@ use core_text;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class search_modules extends external_api {
-
     /**
      * External function parameters.
      *
@@ -94,7 +93,6 @@ class search_modules extends external_api {
         $moduletype = $options['type'] ?? null;
 
         foreach ($modinfo->get_sections() as $sectionnum => $cmids) {
-
             $modules = [];
             foreach ($cmids as $cmid) {
                 $cm = $modinfo->get_cm($cmid);
@@ -152,5 +150,4 @@ class search_modules extends external_api {
             ])),
         ]));
     }
-
 }

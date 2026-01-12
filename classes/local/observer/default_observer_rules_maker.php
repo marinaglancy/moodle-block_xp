@@ -36,7 +36,6 @@ namespace block_xp\local\observer;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class default_observer_rules_maker implements observer_rules_maker {
-
     /**
      * Get observer rules.
      */
@@ -53,5 +52,4 @@ class default_observer_rules_maker implements observer_rules_maker {
             ],
         ];
     }
-
 }

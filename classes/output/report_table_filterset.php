@@ -30,11 +30,9 @@ use core_table\local\filter\string_filter;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class report_table_filterset extends filterset {
-
     public function get_optional_filters(): array {
         return [
             'term' => string_filter::class,
         ];
     }
-
 }

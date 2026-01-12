@@ -40,7 +40,6 @@ use lang_string;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface ruletype {
-
     /** Unlimited. */
     const WINDOW_NONE = null;
     /** Once only. */
@@ -101,5 +100,4 @@ interface ruletype {
      * @return reason
      */
     public function make_reason(action $action): reason;
-
 }

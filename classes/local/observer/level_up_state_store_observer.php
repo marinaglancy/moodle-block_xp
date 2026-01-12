@@ -39,7 +39,6 @@ use block_xp\local\xp\state_store;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface level_up_state_store_observer {
-
     /**
      * The recipient leveled up.
      *
@@ -50,5 +49,4 @@ interface level_up_state_store_observer {
      * @return void
      */
     public function leveled_up(state_store $store, $id, level $beforelevel, level $afterlevel);
-
 }

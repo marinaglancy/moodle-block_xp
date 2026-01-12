@@ -45,7 +45,6 @@ use block_xp\tests\base_testcase;
  * @covers     \block_xp\local\config\default_admin_config
  */
 final class course_world_config_test extends base_testcase {
-
     public function test_default_config(): void {
         global $DB;
 
@@ -79,5 +78,4 @@ final class course_world_config_test extends base_testcase {
         $config->set('neighbours', 6);
         $this->assertNotEquals($config->get('neighbours'), $cfg2->get('neighbours'));
     }
-
 }

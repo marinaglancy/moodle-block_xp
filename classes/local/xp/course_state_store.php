@@ -36,7 +36,6 @@ namespace block_xp\local\xp;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface course_state_store extends state_store {
-
     /**
      * Reset all experience for users in a group.
      *
@@ -44,5 +43,4 @@ interface course_state_store extends state_store {
      * @return void
      */
     public function reset_by_group($groupid);
-
 }

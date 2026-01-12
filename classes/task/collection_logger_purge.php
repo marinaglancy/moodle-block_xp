@@ -38,7 +38,6 @@ use DateTime;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class collection_logger_purge extends \core\task\scheduled_task {
-
     /**
      * Get name.
      *
@@ -68,5 +67,4 @@ class collection_logger_purge extends \core\task\scheduled_task {
         $logger = \block_xp\di::get('collection_logger');
         $logger->delete_older_than($dt);
     }
-
 }

@@ -38,7 +38,6 @@ use moodle_database;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class course_world_config extends proxy_config {
-
     /** No ranking. */
     const RANK_OFF = 0;
     /** Ranking enabled. */
@@ -84,7 +83,8 @@ class course_world_config extends proxy_config {
             new default_course_world_config(),
         ]);
 
-        $config = new \block_xp\local\config\table_row_config($db,
+        $config = new \block_xp\local\config\table_row_config(
+            $db,
             'block_xp_config',
             $defaults,
             ['courseid' => $courseid],
@@ -92,5 +92,4 @@ class course_world_config extends proxy_config {
         );
         parent::__construct($config);
     }
-
 }

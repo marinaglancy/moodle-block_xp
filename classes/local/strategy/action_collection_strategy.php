@@ -38,7 +38,6 @@ use block_xp\local\action\action;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface action_collection_strategy extends collection_strategy {
-
     /**
      * Handle an action.
      *
@@ -46,5 +45,4 @@ interface action_collection_strategy extends collection_strategy {
      * @return void
      */
     public function collect_action(action $action);
-
 }

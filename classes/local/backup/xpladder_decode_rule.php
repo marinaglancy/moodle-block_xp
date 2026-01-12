@@ -34,7 +34,6 @@ require_once($CFG->dirroot . '/backup/util/helper/restore_decode_rule.class.php'
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class xpladder_decode_rule extends \restore_decode_rule {
-
     /**
      * Constructor.
      */
@@ -138,5 +137,4 @@ class xpladder_decode_rule extends \restore_decode_rule {
         $mappings = (array) $mappings;
         return array_combine(range(1, count($mappings)), $mappings);
     }
-
 }

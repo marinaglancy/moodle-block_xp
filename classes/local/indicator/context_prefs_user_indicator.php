@@ -39,7 +39,6 @@ use moodle_database;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class context_prefs_user_indicator extends proxy_user_indicator {
-
     /**
      * Constructor.
      *
@@ -49,5 +48,4 @@ class context_prefs_user_indicator extends proxy_user_indicator {
     public function __construct(moodle_database $db, context $context) {
         parent::__construct(new prefs_user_indicator($db, 'context-' . $context->id));
     }
-
 }

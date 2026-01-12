@@ -38,7 +38,6 @@ use coding_exception;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class static_config implements config {
-
     /** @var array Data values. */
     private $data = [];
 
@@ -106,5 +105,4 @@ final class static_config implements config {
             $this->set($key, $value);
         }
     }
-
 }

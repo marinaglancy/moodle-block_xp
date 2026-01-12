@@ -38,7 +38,6 @@ namespace block_xp\local\routing;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class url extends \moodle_url {
-
     /** @var string The parameter name for slash arguments. */
     protected $slasharg;
 
@@ -98,5 +97,4 @@ class url extends \moodle_url {
         $this->slasharg = $parameter;
         parent::set_slashargument($path, $parameter, $supported);
     }
-
 }

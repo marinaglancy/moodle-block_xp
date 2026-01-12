@@ -36,7 +36,6 @@ namespace block_xp\local\xp;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface levels_info extends \JsonSerializable {
-
     /**
      * Get the number of levels.
      *
@@ -66,5 +65,4 @@ interface levels_info extends \JsonSerializable {
      * @return level[]
      */
     public function get_levels();
-
 }

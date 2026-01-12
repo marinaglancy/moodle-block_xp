@@ -40,7 +40,6 @@ use stdClass;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class user_utils {
-
     /**
      * Whether a user can earn points.
      *
@@ -214,5 +213,4 @@ class user_utils {
     public static function user_picture($user) {
         return di::get('renderer')->get_user_picture($user);
     }
-
 }

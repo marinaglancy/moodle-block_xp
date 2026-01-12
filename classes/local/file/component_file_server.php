@@ -38,7 +38,6 @@ use context;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface component_file_server {
-
     /**
      * Serve a file.
      *
@@ -52,5 +51,4 @@ interface component_file_server {
      * @return void
      */
     public function serve_component_file($course, $cm, context $context, $filearea, $args, $forcedownload, array $options = []);
-
 }

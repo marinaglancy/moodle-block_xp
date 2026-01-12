@@ -38,7 +38,6 @@ use block_xp\local\sql\limit;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class neighboured_leaderboard implements leaderboard {
-
     /** @var leaderboard The leaderboard. */
     protected $leaderboard;
     /** @var int The neighbours. */
@@ -209,5 +208,4 @@ class neighboured_leaderboard implements leaderboard {
 
         return $this->leaderboard->get_ranking($limit);
     }
-
 }

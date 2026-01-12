@@ -36,7 +36,6 @@ namespace block_xp\local\xp;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class static_level implements level, level_with_badge, level_with_description, level_with_name {
-
     /** @var int The level. */
     protected $level;
     /** @var int The XP required. */
@@ -82,5 +81,4 @@ class static_level implements level, level_with_badge, level_with_description, l
     public function get_name() {
         return $this->name ?? '';
     }
-
 }

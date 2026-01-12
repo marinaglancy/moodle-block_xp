@@ -39,7 +39,6 @@ use stdClass;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class anonymised_user_state extends user_state {
-
     /** @var stdClass The anonymous user. */
     protected $anonuser;
     /** @var state The user state. */
@@ -95,5 +94,4 @@ class anonymised_user_state extends user_state {
     public function get_xp_in_level() {
         return $this->state->get_xp_in_level();
     }
-
 }

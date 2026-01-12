@@ -42,7 +42,6 @@ use moodle_database;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class course_log_recent_activity_repository implements user_recent_activity_repository {
-
     /** @var string The table name */
     protected $table = 'block_xp_log';
     /** @var moodle_database The DB. */
@@ -91,5 +90,4 @@ class course_log_recent_activity_repository implements user_recent_activity_repo
             );
         }, $results);
     }
-
 }

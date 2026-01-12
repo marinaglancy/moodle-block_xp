@@ -36,7 +36,6 @@ namespace block_xp\local\action;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface action {
-
     /**
      * Get the education level of the action.
      *
@@ -71,5 +70,4 @@ interface action {
      * @return int
      */
     public function get_user_id(): int;
-
 }

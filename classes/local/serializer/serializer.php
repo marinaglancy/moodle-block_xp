@@ -36,7 +36,6 @@ namespace block_xp\local\serializer;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface serializer {
-
     /**
      * Serialize.
      *
@@ -44,5 +43,4 @@ interface serializer {
      * @return array|scalar
      */
     public function serialize($thing);
-
 }

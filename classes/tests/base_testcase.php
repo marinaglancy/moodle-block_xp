@@ -37,7 +37,6 @@ use moodle_url;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 abstract class base_testcase extends \advanced_testcase {
-
     /**
      * PHP Unit setup method.
      *
@@ -113,5 +112,4 @@ abstract class base_testcase extends \advanced_testcase {
     protected function reset_container() {
         \block_xp\di::set_container(new \block_xp\local\default_container());
     }
-
 }

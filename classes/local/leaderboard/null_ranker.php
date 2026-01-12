@@ -42,7 +42,6 @@ use block_xp\local\xp\state_rank;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class null_ranker implements ranker {
-
     /**
      * Rank a state.
      *
@@ -62,5 +61,4 @@ class null_ranker implements ranker {
     public function rank_states($states) {
         return new map_iterator($states, [$this, 'rank_state']);
     }
-
 }

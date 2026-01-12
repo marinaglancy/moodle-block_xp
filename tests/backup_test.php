@@ -62,7 +62,6 @@ use restore_dbops;
  * @covers     \restore_xp_block_structure_step
  */
 final class backup_test extends base_testcase {
-
     /**
      * Test restore in new course.
      *
@@ -492,7 +491,8 @@ final class backup_test extends base_testcase {
         $CFG->backup_file_logger_level = backup::LOG_NONE;
 
         // Do backup with default settings. MODE_IMPORT means it will just create the directory and not zip it.
-        $bc = new backup_controller(backup::TYPE_1COURSE,
+        $bc = new backup_controller(
+            backup::TYPE_1COURSE,
             $course->id,
             backup::FORMAT_MOODLE,
             backup::INTERACTIVE_NO,
@@ -665,5 +665,4 @@ final class backup_test extends base_testcase {
 
         return ['c1' => $c1, 'c2' => $c2, 'u1' => $u1, 'u2' => $u2, 'u3' => $u3, 'w1' => $w1];
     }
-
 }

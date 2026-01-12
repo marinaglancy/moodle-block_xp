@@ -34,7 +34,6 @@ use progress_trace;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class course_user_state_provisioner {
-
     /** @var context */
     protected $context;
     /** @var \moodle_database */

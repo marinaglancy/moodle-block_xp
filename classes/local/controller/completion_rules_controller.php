@@ -40,7 +40,6 @@ use html_writer;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class completion_rules_controller extends page_controller {
-
     /** @var string The nav name. */
     protected $navname = 'rules';
     /** @var string The route name. */
@@ -73,5 +72,4 @@ class completion_rules_controller extends page_controller {
         echo $renderer->notification_without_close(get_string('unlockfeaturewithxpplus', 'block_xp', $promourl), 'info');
         echo html_writer::end_div();
     }
-
 }

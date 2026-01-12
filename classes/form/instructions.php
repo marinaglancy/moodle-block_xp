@@ -43,7 +43,6 @@ use moodleform;
  * @deprecated Since XP 3.17
  */
 class instructions extends moodleform {
-
     /**
      * Form definition.
      *

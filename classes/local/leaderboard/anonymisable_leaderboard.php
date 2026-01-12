@@ -42,7 +42,6 @@ use block_xp\local\xp\state_rank;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class anonymisable_leaderboard implements leaderboard {
-
     /** @var leaderboard The leaderboard to anonymise. */
     protected $leaderboard;
     /** @var state_anonymiser The anonymiser. */
@@ -122,5 +121,4 @@ class anonymisable_leaderboard implements leaderboard {
             return $this->anonymise_rank($state);
         });
     }
-
 }

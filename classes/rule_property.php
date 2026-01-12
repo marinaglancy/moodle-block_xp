@@ -32,7 +32,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_xp_rule_property extends block_xp_rule_base {
-
     /**
      * The class property to compare against.
      *

@@ -32,7 +32,6 @@ use block_xp\tests\base_testcase;
  * @covers     \local_xp\local\config\bulk_world_config_setter
  */
 final class bulk_world_config_setter_test extends base_testcase {
-
     /**
      * Test bulk override.
      */
@@ -142,5 +141,4 @@ final class bulk_world_config_setter_test extends base_testcase {
         $this->assertEquals('{}', $cfg1->get('levelsdata'));
         $this->assertEquals('{"invalid": true}', $cfg2->get('levelsdata'));
     }
-
 }

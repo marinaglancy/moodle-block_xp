@@ -36,7 +36,6 @@ namespace block_xp\local\ruletype;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class default_resolver implements resolver {
-
     /** @var (ruletype|false)[] The types. */
     protected $types = [];
 
@@ -63,5 +62,4 @@ class default_resolver implements resolver {
     public function get_type_name(ruletype $type): string {
         return str_replace("block_xp\\local\\ruletype\\", '', get_class($type));
     }
-
 }

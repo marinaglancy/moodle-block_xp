@@ -30,7 +30,6 @@ use core\task\adhoc_task;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class post_deactivation_adhoc extends adhoc_task {
-
     public function execute() {
         if (defined('PHPUNIT_TEST')) {
             return;
@@ -101,5 +100,4 @@ class post_deactivation_adhoc extends adhoc_task {
         $task->set_component('block_xp');
         \core\task\manager::queue_adhoc_task($task, true);
     }
-
 }

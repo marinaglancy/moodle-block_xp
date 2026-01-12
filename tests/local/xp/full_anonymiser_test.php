@@ -33,7 +33,6 @@ use moodle_url;
  * @covers     \block_xp\local\xp\full_anonymiser
  */
 final class full_anonymiser_test extends base_testcase {
-
     /**
      * Test user state.
      */
@@ -256,5 +255,4 @@ final class full_anonymiser_test extends base_testcase {
             $this->fail('The anonymised state should implement state_with_user.');
         }
     }
-
 }

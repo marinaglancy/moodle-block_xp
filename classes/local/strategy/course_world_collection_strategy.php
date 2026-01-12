@@ -44,7 +44,6 @@ use block_xp\local\xp\course_user_state_store;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class course_world_collection_strategy implements event_collection_strategy {
-
     /** @var context The context. */
     protected $context;
     /** @var config The config. */
@@ -228,5 +227,4 @@ class course_world_collection_strategy implements event_collection_strategy {
 
         return true;
     }
-
 }

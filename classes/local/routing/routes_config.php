@@ -36,7 +36,6 @@ namespace block_xp\local\routing;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface routes_config {
-
     /**
      * Get a route.
      *
@@ -51,5 +50,4 @@ interface routes_config {
      * @return route_definition[]
      */
     public function get_routes();
-
 }

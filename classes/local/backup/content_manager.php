@@ -36,7 +36,6 @@ namespace block_xp\local\backup;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class content_manager {
-
     /**
      * Encode content links.
      *
@@ -58,5 +57,4 @@ class content_manager {
             new xpladder_decode_rule(),
         ];
     }
-
 }

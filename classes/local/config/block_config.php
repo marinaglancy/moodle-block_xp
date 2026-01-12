@@ -40,7 +40,6 @@ use stdClass;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_config implements config {
-
     /** @var block_base The block instance. */
     private $bi;
     /** @var stdClass The reference to the block config object. */
@@ -148,5 +147,4 @@ class block_config implements config {
         }
         $this->save();
     }
-
 }

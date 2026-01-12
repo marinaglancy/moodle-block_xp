@@ -36,7 +36,6 @@ namespace block_xp\local\reason;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class event_name_reason implements reason {
-
     /** @var string The event name. */
     protected $eventname;
 
@@ -76,5 +75,4 @@ class event_name_reason implements reason {
     public static function from_signature($signature) {
         return new static($signature);
     }
-
 }

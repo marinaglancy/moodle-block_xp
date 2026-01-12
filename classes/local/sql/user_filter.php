@@ -37,12 +37,10 @@ namespace block_xp\local\sql;
  * @deprecated Since XP 19, use \block_xp\local\userfilter\user_filter instead.
  */
 interface user_filter {
-
     /**
      * Get the SQL fragment to filter users.
      *
      * @return array Containing both SQL fragment, and params.
      */
     public function get_sql(string $useridalias): array;
-
 }

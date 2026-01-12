@@ -38,7 +38,6 @@ use block_xp\local\sql\limit;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class empty_leaderboard implements leaderboard {
-
     /** @var array The columns. */
     protected $columns;
 

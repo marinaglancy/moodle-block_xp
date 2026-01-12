@@ -38,7 +38,6 @@ use block_xp\di;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class create_rule extends external_api {
-
     /**
      * External function parameters.
      *
@@ -74,7 +73,8 @@ class create_rule extends external_api {
      * @return int
      */
     public static function execute($contextid, $points, $type, $filter, $childcontextid = 0) {
-        $params = self::validate_parameters(self::execute_parameters(), compact('contextid',
+        $params = self::validate_parameters(self::execute_parameters(), compact(
+            'contextid',
             'type',
             'points',
             'filter',
@@ -171,5 +171,4 @@ class create_rule extends external_api {
     public static function execute_returns() {
         return new external_value(PARAM_INT);
     }
-
 }

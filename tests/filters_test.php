@@ -46,7 +46,6 @@ use block_xp_ruleset;
  * @covers     \block_xp\local\xp\course_filter_manager
  */
 final class filters_test extends base_testcase {
-
     /**
      * Get the filter manager.
      *
@@ -288,5 +287,4 @@ final class filters_test extends base_testcase {
         $filter = block_xp_filter::load_from_data(['category' => (string) block_xp_filter::CATEGORY_GRADES]);
         $this->assertEquals(block_xp_filter::CATEGORY_GRADES, $filter->get_category());
     }
-
 }

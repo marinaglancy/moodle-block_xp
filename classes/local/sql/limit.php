@@ -36,7 +36,6 @@ namespace block_xp\local\sql;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class limit {
-
     /** @var int The count. */
     protected $count;
     /** @var int The offset. */
@@ -70,5 +69,4 @@ class limit {
     public function get_offset() {
         return $this->offset;
     }
-
 }

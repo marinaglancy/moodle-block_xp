@@ -32,7 +32,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 abstract class block_xp_rule implements renderable {
-
     /**
      * Create a ruleset object from exported data.
      *
@@ -162,5 +161,4 @@ abstract class block_xp_rule implements renderable {
 
         return $valid;
     }
-
 }

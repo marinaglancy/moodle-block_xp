@@ -45,7 +45,6 @@ use pix_icon;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class log_table extends table_sql {
-
     /** @var string The key of the user ID column. */
     public $useridfield = 'userid';
     /** @var \moodle_database DB. */

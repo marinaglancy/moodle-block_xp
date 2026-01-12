@@ -36,7 +36,6 @@ namespace block_xp\local\xp;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface level_with_name extends level {
-
     /**
      * Get the name of the level.
      *
@@ -45,5 +44,4 @@ interface level_with_name extends level {
      * @return string
      */
     public function get_name();
-
 }

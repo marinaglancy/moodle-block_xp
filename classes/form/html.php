@@ -36,7 +36,6 @@ require_once($CFG->libdir . '/pear/HTML/QuickForm/html.php');
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class html extends HTML_QuickForm_html {
-
     /** @var object|string|callable The lazy string. */
     protected $content;
 
@@ -72,5 +71,4 @@ class html extends HTML_QuickForm_html {
         \MoodleQuickForm::registerElementType('block_xp_html', __FILE__, html::class); // @codingStandardsIgnoreLine
         return 'block_xp_html';
     }
-
 }

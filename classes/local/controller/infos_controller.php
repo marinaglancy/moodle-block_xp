@@ -39,7 +39,6 @@ use block_xp\form\instructions;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class infos_controller extends page_controller {
-
     /** @var bool */
     protected $requiremanage = false;
     /** @var string */
@@ -115,5 +114,4 @@ class infos_controller extends page_controller {
 
         echo $output->levels_grid($levelsinfo->get_levels());
     }
-
 }

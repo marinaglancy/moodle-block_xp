@@ -43,7 +43,6 @@ use moodle_url;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class file_storage_badge_url_resolver implements badge_url_resolver {
-
     /** @var context The context. */
     protected $context;
     /** @var string The component. */
@@ -121,5 +120,4 @@ class file_storage_badge_url_resolver implements badge_url_resolver {
 
         $this->files = $files;
     }
-
 }

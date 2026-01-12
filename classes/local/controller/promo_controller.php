@@ -45,7 +45,6 @@ use moodle_url;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class promo_controller extends route_controller {
-
     /** Seen flag. */
     const SEEN_FLAG = 'promo-page-seen';
     /** Page version. */
@@ -384,5 +383,4 @@ EOT;
         $indicator = \block_xp\di::get('user_generic_indicator');
         $value = $indicator->set_user_flag($USER->id, self::SEEN_FLAG, self::VERSION);
     }
-
 }

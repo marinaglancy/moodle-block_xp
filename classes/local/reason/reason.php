@@ -38,7 +38,6 @@ namespace block_xp\local\reason;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface reason {
-
     /**
      * Get a signature.
      *
@@ -60,5 +59,4 @@ interface reason {
      * @return self
      */
     public static function from_signature($signature);
-
 }

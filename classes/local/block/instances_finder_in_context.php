@@ -38,7 +38,6 @@ use context;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface instances_finder_in_context {
-
     /**
      * Tries to find instances of the block in a context.
      *
@@ -47,5 +46,4 @@ interface instances_finder_in_context {
      * @return \block_base[]
      */
     public function get_instances_in_context($name, context $context);
-
 }

@@ -41,7 +41,6 @@ namespace block_xp\local\indicator;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class proxy_user_indicator implements user_indicator {
-
     /** @var user_indicator The indicator. */
     private $indicator;
 
@@ -105,5 +104,4 @@ class proxy_user_indicator implements user_indicator {
     public function user_has_flag($userid, $flag) {
         return $this->indicator->user_has_flag($userid, $flag);
     }
-
 }

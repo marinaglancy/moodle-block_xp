@@ -26,7 +26,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class behat_block_xp_generator extends behat_generator_base {
-
     protected function get_creatable_entities(): array {
         return [
             'config' => [
@@ -60,5 +59,4 @@ class behat_block_xp_generator extends behat_generator_base {
         $courseid = $this->get_course_id($worldcontext);
         return context_course::instance($courseid)->id;
     }
-
 }

@@ -42,7 +42,6 @@ use block_xp\tests\base_testcase;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class levels_info_writer_test extends base_testcase {
-
     /**
      * Data provider.
      *

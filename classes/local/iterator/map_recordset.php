@@ -41,7 +41,6 @@ use NoRewindIterator;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class map_recordset extends NoRewindIterator {
-
     /** @var callable The callable. */
     protected $callback;
 
@@ -94,5 +93,4 @@ class map_recordset extends NoRewindIterator {
         }
         return $valid;
     }
-
 }

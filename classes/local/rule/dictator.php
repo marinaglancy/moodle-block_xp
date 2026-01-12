@@ -38,7 +38,6 @@ use block_xp\local\rule\instance;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface dictator {
-
     /**
      * Count rules in context.
      *
@@ -93,5 +92,4 @@ interface dictator {
      * @return instance[] The most important rules first.
      */
     public function sort_rules_by_priority($rules): array;
-
 }

@@ -46,7 +46,6 @@ use html_writer;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class admin_visuals_controller extends admin_route_controller {
-
     /** @var string The section name. */
     protected $sectionname = 'block_xp_default_visuals';
     /** @var moodleform The form. */
@@ -111,7 +110,8 @@ class admin_visuals_controller extends admin_route_controller {
      */
     protected function get_initial_form_data() {
         $draftitemid = file_get_submitted_draft_itemid('badges');
-        file_prepare_draft_area($draftitemid,
+        file_prepare_draft_area(
+            $draftitemid,
             $this->get_filemanager_context()->id,
             'block_xp',
             'defaultbadges',
@@ -176,7 +176,8 @@ class admin_visuals_controller extends admin_route_controller {
      * @return void
      */
     protected function save_form_data($data) {
-        file_save_draft_area_files($data->badges,
+        file_save_draft_area_files(
+            $data->badges,
             $this->get_filemanager_context()->id,
             'block_xp',
             'defaultbadges',
@@ -222,7 +223,8 @@ class admin_visuals_controller extends admin_route_controller {
             echo $output->heading_with_divider(get_string('dangerzone', 'block_xp'));
             echo html_writer::tag('p', markdown_to_html(get_string('resetallcoursestodefaultsintro', 'block_xp')));
             $url = new url($this->pageurl, ['reset' => 1, 'sesskey' => sesskey()]);
-            echo html_writer::tag('p',
+            echo html_writer::tag(
+                'p',
                 $output->render($output->make_single_button(
                     $url->get_compatible_url(),
                     get_string('resetallcoursestodefaults', 'block_xp'),
@@ -268,5 +270,4 @@ class admin_visuals_controller extends admin_route_controller {
         }
         return $levelsinfo;
     }
-
 }

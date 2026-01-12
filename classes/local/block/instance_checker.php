@@ -29,7 +29,6 @@ use context;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 interface instance_checker {
-
     /**
      * Count instances in context.
      *
@@ -47,5 +46,4 @@ interface instance_checker {
      * @return bool
      */
     public function has_instance_in_context($name, context $context);
-
 }

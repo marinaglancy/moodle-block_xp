@@ -43,7 +43,6 @@ use block_xp\local\routing\url_resolver;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class default_course_world_navigation_factory implements course_world_navigation_factory {
-
     /** @var config The admin config. */
     protected $adminconfig;
     /** @var url_resolver The URL resolver. */
@@ -134,7 +133,6 @@ class default_course_world_navigation_factory implements course_world_navigation
         $canviewlogs = $accessperms instanceof access_logs_permissions && $accessperms->can_access_logs();
         $canviewreport = $accessperms instanceof access_report_permissions && $accessperms->can_access_report();
         if ($canviewreport || $canviewlogs) {
-
             // The link is always called report, but leads to the logs if we can't view the report.
             $mainurl = $urlresolver->reverse('report', ['courseid' => $courseid]);
             if (!$canviewreport) {
@@ -258,5 +256,4 @@ class default_course_world_navigation_factory implements course_world_navigation
 
         return $links;
     }
-
 }

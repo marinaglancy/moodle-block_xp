@@ -158,5 +158,4 @@ class cheatguard extends dynamic_form {
 
         parent::set_data($data);
     }
-
 }

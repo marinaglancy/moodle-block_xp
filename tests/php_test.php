@@ -43,7 +43,6 @@ global $CFG, $DB;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class php_test extends base_testcase {
-
     /**
      * PHP files provider.
      *
@@ -91,5 +90,4 @@ final class php_test extends base_testcase {
             $this->fail("Failed to include file: $relpath");
         }
     }
-
 }
