@@ -59,6 +59,11 @@ class promo_controller extends route_controller {
     /** @var world The world. */
     protected $world;
 
+    /**
+     * Define optional params.
+     *
+     * @return void
+     */
     protected function define_optional_params() {
         return [
             ['sent', 0, PARAM_INT, false],
@@ -75,6 +80,11 @@ class promo_controller extends route_controller {
         return empty($params['courseid']);
     }
 
+    /**
+     * Require login.
+     *
+     * @return void
+     */
     protected function require_login() {
         global $CFG, $PAGE, $USER, $SITE, $OUTPUT;
         if ($this->is_admin_page()) {
@@ -99,6 +109,11 @@ class promo_controller extends route_controller {
         return '';
     }
 
+    /**
+     * Post login.
+     *
+     * @return void
+     */
     protected function post_login() {
         $this->urlresolver = \block_xp\di::get('url_resolver');
         if (!$this->is_admin_page()) {
@@ -135,6 +150,11 @@ class promo_controller extends route_controller {
         }
     }
 
+    /**
+     * Content.
+     *
+     * @return string
+     */
     protected function content() {
         global $USER;
 
@@ -290,6 +310,12 @@ EOT;
 EOT;
     }
 
+    /**
+     * Content installed.
+     *
+     * @param bool $hasnewcontent Has new content.
+     * @return string
+     */
     protected function content_installed(bool $hasnewcontent = false) {
         $output = \block_xp\di::get('renderer');
         $addon = \block_xp\di::get('addon');

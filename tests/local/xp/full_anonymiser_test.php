@@ -88,10 +88,22 @@ final class full_anonymiser_test extends base_testcase {
         $name = fullname($user);
 
         $state = new class ($id, $name, $link, $pic) implements state_with_subject {
+            /** @var int ID */
             protected $id;
+            /** @var string Name */
             protected $name;
+            /** @var moodle_url Link */
             protected $link;
+            /** @var moodle_url Picture */
             protected $pic;
+            /**
+             * Constructor.
+             *
+             * @param int $id ID
+             * @param string $name Name
+             * @param moodle_url $link Link
+             * @param moodle_url $pic Picture
+             */
             public function __construct($id, $name, $link, $pic) {
                 $this->id = $id;
                 $this->name = $name;
@@ -99,38 +111,83 @@ final class full_anonymiser_test extends base_testcase {
                 $this->pic = $pic;
             }
 
+            /**
+             * Get ID.
+             *
+             * @return int
+             */
             public function get_id() {
                 return $this->id;
             }
 
+            /**
+             * Get level.
+             *
+             * @return object
+             */
             public function get_level() {
                 return new static_level(1, 0);
             }
 
+            /**
+             * Get link.
+             *
+             * @return \moodle_url
+             */
             public function get_link() {
                 return $this->link;
             }
 
+            /**
+             * Get name.
+             *
+             * @return string
+             */
             public function get_name() {
                 return $this->name;
             }
 
+            /**
+             * Get picture.
+             *
+             * @return string
+             */
             public function get_picture() {
                 return $this->pic;
             }
 
+            /**
+             * Get ratio in level.
+             *
+             * @return float
+             */
             public function get_ratio_in_level() {
                 return 0;
             }
 
+            /**
+             * Get total XP in level.
+             *
+             * @return int
+             */
             public function get_total_xp_in_level() {
                 return 100;
             }
 
+            /**
+             * Get XP.
+             *
+             * @return int
+             */
             public function get_xp() {
                 return 0;
             }
 
+            /**
+             * Get XP in level.
+             *
+             * @return int
+             */
             public function get_xp_in_level() {
                 return 0;
             }
@@ -155,7 +212,7 @@ final class full_anonymiser_test extends base_testcase {
         // This fails, we maybe should obfuscate the ID but first we need to confirm
         // that the ID is not used anywhere.
         // $this->assertNotEquals($user->id, $anonstate->get_id());
-        // $this->assertEquals($anonuser->id, $anonstate->get_id());
+        // $this->assertEquals($anonuser->id, $anonstate->get_id()).
         if ($anonstate instanceof state_with_subject) {
             $this->assertNotEquals(fullname($user), $anonstate->get_name());
             $this->assertNotEquals($link, $anonstate->get_link());
@@ -177,48 +234,104 @@ final class full_anonymiser_test extends base_testcase {
 
         // Create a state_with_user that also contains state_with_subject to confirm their anonymity.
         $state = new class ($user) implements state_with_subject, state_with_user {
+            /** @var object User */
             protected $user;
 
+            /**
+             * Constructor.
+             *
+             * @param object $user User
+             */
             public function __construct($user) {
                 $this->user = $user;
             }
 
+            /**
+             * Get ID.
+             *
+             * @return int
+             */
             public function get_id() {
                 return $this->user->id;
             }
 
+            /**
+             * Get level.
+             *
+             * @return object
+             */
             public function get_level() {
                 return new static_level(1, 0);
             }
 
+            /**
+             * Get link.
+             *
+             * @return \moodle_url
+             */
             public function get_link() {
                 return new moodle_url('user.php', ['id' => $this->user->id]);
             }
 
+            /**
+             * Get name.
+             *
+             * @return string
+             */
             public function get_name() {
                 return fullname($this->user);
             }
 
+            /**
+             * Get picture.
+             *
+             * @return string
+             */
             public function get_picture() {
                 return new moodle_url('pic.php', ['id' => $this->user->id]);
             }
 
+            /**
+             * Get ratio in level.
+             *
+             * @return float
+             */
             public function get_ratio_in_level() {
                 return 0;
             }
 
+            /**
+             * Get total XP in level.
+             *
+             * @return int
+             */
             public function get_total_xp_in_level() {
                 return 100;
             }
 
+            /**
+             * Get user.
+             *
+             * @return object
+             */
             public function get_user() {
                 return $this->user;
             }
 
+            /**
+             * Get XP.
+             *
+             * @return int
+             */
             public function get_xp() {
                 return 0;
             }
 
+            /**
+             * Get XP in level.
+             *
+             * @return int
+             */
             public function get_xp_in_level() {
                 return 0;
             }

@@ -72,8 +72,8 @@ final class state_provisioner_test extends base_testcase {
      * Test course user state provisioner with course.
      *
      * @dataProvider course_user_state_provisioner_with_course_provider
-     * @param string|null $rolepermission
-     * @param bool $expectsexists
+     * @param string|null $rolepermission The role permission
+     * @param bool $expectedexists Whether the state is expected to exist
      */
     public function test_course_user_state_provisioner_with_course(?string $rolepermission, bool $expectedexists): void {
         $dg = $this->getDataGenerator();
@@ -294,10 +294,9 @@ final class state_provisioner_test extends base_testcase {
      * Test task with course context.
      *
      * @dataProvider task_with_course_context_provider
-     * @param bool $provisionstates
-     * @param bool $isenabled
-     * @param string|null $rolepermission
-     * @param bool $expectedexists
+     * @param bool $isenabled Whether the world is enabled
+     * @param string|null $rolepermission The role permission
+     * @param bool $expectedexists Whether the state is expected to exist
      */
     public function test_task_with_course_context(bool $isenabled, ?string $rolepermission, bool $expectedexists): void {
 
@@ -384,10 +383,9 @@ final class state_provisioner_test extends base_testcase {
      * Test task with system context.
      *
      * @dataProvider task_with_system_context_provider
-     * @param bool $provisionstates
-     * @param array $roleincontexts
-     * @param string $rolepermission
-     * @param bool $expectedexists
+     * @param array $roleincontexts Array of role assignments in contexts
+     * @param string $rolepermission The role permission
+     * @param bool $expectedexists Whether the state is expected to exist
      * @return void
      */
     public function test_task_with_system_context(array $roleincontexts, string $rolepermission, bool $expectedexists): void {

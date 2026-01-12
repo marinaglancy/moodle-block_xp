@@ -45,12 +45,22 @@ class leaderboard extends dynamic_form {
     /** @var string */
     protected $routename = 'ladder';
 
+    /**
+     * Process the form submission.
+     *
+     * @return void
+     */
     public function process_dynamic_submission() {
         $config = $this->get_world()->get_config();
         $data = $this->get_data();
         $config->set_many((array) $data);
     }
 
+    /**
+     * Set data for dynamic submission.
+     *
+     * @return void
+     */
     public function set_data_for_dynamic_submission(): void {
         $config = $this->get_world()->get_config();
         $this->set_data([

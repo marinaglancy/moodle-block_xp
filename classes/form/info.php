@@ -43,6 +43,11 @@ class info extends dynamic_form {
     /** @var string */
     protected $routename = 'infos';
 
+    /**
+     * Process the form submission.
+     *
+     * @return void
+     */
     public function process_dynamic_submission() {
         $config = $this->get_world()->get_config();
         $data = $this->get_data();
@@ -51,6 +56,11 @@ class info extends dynamic_form {
         $config->set('instructions_format', $data->instructions['format']);
     }
 
+    /**
+     * Set data for dynamic submission.
+     *
+     * @return void
+     */
     public function set_data_for_dynamic_submission(): void {
         $config = $this->get_world()->get_config();
         $this->set_data([

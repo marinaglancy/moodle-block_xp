@@ -79,6 +79,11 @@ class config_controller extends page_controller {
         return $this->form;
     }
 
+    /**
+     * Pre content.
+     *
+     * @return void
+     */
     protected function pre_content() {
         $config = $this->world->get_config();
         $form = $this->get_form();
@@ -94,20 +99,40 @@ class config_controller extends page_controller {
         }
     }
 
+    /**
+     * Get page HTML head title.
+     *
+     * @return string
+     */
     protected function get_page_html_head_title() {
         return get_string('coursesettings', 'block_xp');
     }
 
+    /**
+     * Get page heading.
+     *
+     * @return string
+     */
     protected function get_page_heading() {
         return get_string('coursesettings', 'block_xp');
     }
 
+    /**
+     * Page content.
+     *
+     * @return string
+     */
     protected function page_content() {
         $form = $this->get_form();
         $form->display();
         $this->page_note();
     }
 
+    /**
+     * Page note.
+     *
+     * @return void
+     */
     protected function page_note() {
         $configlocked = \block_xp\di::get('config_locked');
         $thoselocked = array_filter($configlocked->get_all());

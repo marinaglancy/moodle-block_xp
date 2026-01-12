@@ -26,6 +26,8 @@
  */
 
 // No declared namespace, on purpose!
+// phpcs:disable PSR1.Classes.ClassDeclaration.MultipleClasses
+// phpcs:disable moodle.Files.MoodleInternal.MoodleInternalNotNeeded
 defined('MOODLE_INTERNAL') || die();
 
 // This file will never be autoloaded, and should never be included either. Its content

@@ -45,20 +45,40 @@ class import_controller extends page_controller {
     /** @var string The route name. */
     protected $routename = 'import';
 
+    /**
+     * Pre content.
+     *
+     * @return void
+     */
     protected function pre_content() {
         if (!di::get('config')->get('enablepromoincourses')) {
             return redirect($this->urlresolver->reverse('report', ['courseid' => $this->courseid]));
         }
     }
 
+    /**
+     * Get page HTML head title.
+     *
+     * @return string
+     */
     protected function get_page_html_head_title() {
         return get_string('importpoints', 'block_xp');
     }
 
+    /**
+     * Get page heading.
+     *
+     * @return string
+     */
     protected function get_page_heading() {
         return get_string('importpoints', 'block_xp');
     }
 
+    /**
+     * Page content.
+     *
+     * @return string
+     */
     protected function page_content() {
         $renderer = $this->get_renderer();
         $promourl = $this->urlresolver->reverse('promo', ['courseid' => $this->courseid])->out(false);

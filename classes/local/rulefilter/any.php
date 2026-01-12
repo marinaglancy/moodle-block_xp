@@ -39,30 +39,69 @@ use lang_string;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class any implements rulefilter {
+    /**
+     * Get action tester.
+     *
+     * @param context $effectivecontext The effective context
+     * @param object $config The configuration object
+     * @return action_tester
+     */
     public function get_action_tester(context $effectivecontext, object $config): action_tester {
         return new any_tester();
     }
 
+    /**
+     * Get compatible context levels.
+     *
+     * @return array
+     */
     public function get_compatible_context_levels(): array {
         return [CONTEXT_SYSTEM, CONTEXT_COURSE];
     }
 
+    /**
+     * Get display name.
+     *
+     * @return string
+     */
     public function get_display_name(): lang_string {
         return new lang_string('rulefilterany', 'block_xp');
     }
 
+    /**
+     * Get label for config.
+     *
+     * @param object $config The configuration object
+     * @param context|null $effectivecontext The effective context
+     * @return string
+     */
     public function get_label_for_config(object $config, ?context $effectivecontext = null): string {
         return get_string('rulefilterany', 'block_xp');
     }
 
+    /**
+     * Get short description.
+     *
+     * @return string
+     */
     public function get_short_description(): lang_string {
         return new lang_string('rulefilteranydesc', 'block_xp');
     }
 
+    /**
+     * Is compatible with admin.
+     *
+     * @return bool
+     */
     public function is_compatible_with_admin(): bool {
         return true;
     }
 
+    /**
+     * Is multiple allowed.
+     *
+     * @return bool
+     */
     public function is_multiple_allowed(): bool {
         return false;
     }

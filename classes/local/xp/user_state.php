@@ -68,10 +68,20 @@ class user_state implements renderable, state, state_with_subject, state_with_us
         $this->courseid = !empty($courseid) ? $courseid : SITEID;
     }
 
+    /**
+     * Get ID.
+     *
+     * @return int
+     */
     public function get_id() {
         return $this->user->id;
     }
 
+    /**
+     * Get level.
+     *
+     * @return object
+     */
     public function get_level() {
         if (!$this->level) {
             $this->level = $this->levelsinfo->get_level_from_xp($this->xp);
@@ -79,6 +89,11 @@ class user_state implements renderable, state, state_with_subject, state_with_us
         return $this->level;
     }
 
+    /**
+     * Get link.
+     *
+     * @return \moodle_url
+     */
     public function get_link() {
         $userid = $this->user->id;
         $profileurl = new moodle_url('/user/profile.php', ['id' => $userid]);
@@ -88,14 +103,29 @@ class user_state implements renderable, state, state_with_subject, state_with_us
         return $profileurl;
     }
 
+    /**
+     * Get name.
+     *
+     * @return string
+     */
     public function get_name() {
         return fullname($this->user);
     }
 
+    /**
+     * Get picture.
+     *
+     * @return string
+     */
     public function get_picture() {
         return user_utils::user_picture($this->user);
     }
 
+    /**
+     * Get ratio in level.
+     *
+     * @return float
+     */
     public function get_ratio_in_level() {
         $total = $this->get_total_xp_in_level();
         if ($total <= 0) {
@@ -104,6 +134,11 @@ class user_state implements renderable, state, state_with_subject, state_with_us
         return $this->get_xp_in_level() / $total;
     }
 
+    /**
+     * Get total XP in level.
+     *
+     * @return int
+     */
     public function get_total_xp_in_level() {
         $nextlevel = $this->get_next_level();
         if (!$nextlevel) {
@@ -123,10 +158,20 @@ class user_state implements renderable, state, state_with_subject, state_with_us
         return $this->user;
     }
 
+    /**
+     * Get XP.
+     *
+     * @return int
+     */
     public function get_xp() {
         return $this->xp;
     }
 
+    /**
+     * Get XP in level.
+     *
+     * @return int
+     */
     public function get_xp_in_level() {
         return $this->xp - $this->get_level()->get_xp_required();
     }

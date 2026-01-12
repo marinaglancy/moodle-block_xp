@@ -39,6 +39,7 @@ class nobody implements user_filter {
     /**
      * Get the SQL fragment to filter users.
      *
+     * @param string $useridalias The alias for the user ID field
      * @return array
      */
     public function get_sql(string $useridalias): array {

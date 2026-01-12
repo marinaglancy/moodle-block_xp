@@ -54,6 +54,11 @@ class visuals_controller extends page_controller {
     /** @var moodleform The form. */
     private $form;
 
+    /**
+     * Define optional params.
+     *
+     * @return void
+     */
     protected function define_optional_params() {
         return [
             ['reset', false, PARAM_BOOL, false],
@@ -104,6 +109,11 @@ class visuals_controller extends page_controller {
         return $this->form;
     }
 
+    /**
+     * Pre content.
+     *
+     * @return void
+     */
     protected function pre_content() {
 
         // Reset to defaults.
@@ -196,14 +206,29 @@ class visuals_controller extends page_controller {
         $config->set('enablecustomlevelbadges', course_world_config::CUSTOM_BADGES_NOOP);
     }
 
+    /**
+     * Get page HTML head title.
+     *
+     * @return string
+     */
     protected function get_page_html_head_title() {
         return get_string('levelsappearance', 'block_xp');
     }
 
+    /**
+     * Get page heading.
+     *
+     * @return string
+     */
     protected function get_page_heading() {
         return get_string('levelsappearance', 'block_xp');
     }
 
+    /**
+     * Page content.
+     *
+     * @return string
+     */
     protected function page_content() {
         $output = $this->get_renderer();
 
@@ -247,6 +272,11 @@ class visuals_controller extends page_controller {
         echo $this->get_renderer()->levels_preview($levelsinfo->get_levels());
     }
 
+    /**
+     * Page danger zone content.
+     *
+     * @return void
+     */
     protected function page_danger_zone_content() {
     }
 

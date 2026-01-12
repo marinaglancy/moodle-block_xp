@@ -56,10 +56,20 @@ class rule extends dynamic_form {
         return $this->rule;
     }
 
+    /**
+     * Get context for dynamic submission.
+     *
+     * @return \context
+     */
     protected function get_context_for_dynamic_submission(): context {
         return context::instance_by_id($this->get_rule()->contextid);
     }
 
+    /**
+     * Check access for dynamic submission.
+     *
+     * @return void
+     */
     protected function check_access_for_dynamic_submission(): void {
         $worldfactory = di::get('context_world_factory');
         $world = $worldfactory->get_world_from_context(\context::instance_by_id($this->get_rule()->contextid));
@@ -67,6 +77,11 @@ class rule extends dynamic_form {
         $perms->require_manage();
     }
 
+    /**
+     * Process the form submission.
+     *
+     * @return void
+     */
     public function process_dynamic_submission() {
         $data = $this->get_data();
         $rule = $this->get_rule();
@@ -74,6 +89,11 @@ class rule extends dynamic_form {
         di::get('db')->update_record('block_xp_rule', $rule);
     }
 
+    /**
+     * Set data for dynamic submission.
+     *
+     * @return void
+     */
     public function set_data_for_dynamic_submission(): void {
         $this->set_data([
             'id' => $this->get_rule()->id,
@@ -81,6 +101,11 @@ class rule extends dynamic_form {
         ]);
     }
 
+    /**
+     * Get page URL for dynamic submission.
+     *
+     * @return \moodle_url
+     */
     protected function get_page_url_for_dynamic_submission(): moodle_url {
         $urlresolver = di::get('url_resolver');
         $rule = $this->get_rule();
@@ -112,6 +137,14 @@ class rule extends dynamic_form {
         $mform->addHelpButton('points', 'pointstoaward', 'block_xp');
     }
 
+    /**
+     * Validation.
+     *
+     * @param array $data Data to validate
+     * @param array $files Files
+     *
+     * @return array
+     */
     public function validation($data, $files) {
         $errors = parent::validation($data, $files);
 

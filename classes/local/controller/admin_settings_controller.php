@@ -33,6 +33,11 @@ class admin_settings_controller extends admin_route_controller {
     /** @var string The section name. */
     protected $sectionname = 'block_xp_default_settingspage';
 
+    /**
+     * Define optional params.
+     *
+     * @return void
+     */
     protected function define_optional_params() {
         return [
             ['action', false, PARAM_ALPHANUMEXT, false],
@@ -49,6 +54,11 @@ class admin_settings_controller extends admin_route_controller {
         return new url('/admin/settings.php', ['section' => 'block_xp_default_settings']);
     }
 
+    /**
+     * Pre content.
+     *
+     * @return void
+     */
     protected function pre_content() {
         $action = $this->get_param('action');
 

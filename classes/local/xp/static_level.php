@@ -49,6 +49,14 @@ class static_level implements level, level_with_badge, level_with_description, l
     /** @var badge_url_resolver Badge URL resolver. */
     protected $badgeurlresolver;
 
+    /**
+     * Constructor.
+     *
+     * @param int $level Level
+     * @param int $xprequired XP required
+     * @param badge_url_resolver $badgeurlresolver Badge URL resolver
+     * @param array $metadata Metadata
+     */
     public function __construct($level, $xprequired, $badgeurlresolver = null, $metadata = []) {
         $this->level = (int) $level;
         $this->xprequired = (int) $xprequired;
@@ -62,22 +70,47 @@ class static_level implements level, level_with_badge, level_with_description, l
         }
     }
 
+    /**
+     * Get level.
+     *
+     * @return object
+     */
     public function get_level() {
         return $this->level;
     }
 
+    /**
+     * Get XP required.
+     *
+     * @return int
+     */
     public function get_xp_required() {
         return $this->xprequired;
     }
 
+    /**
+     * Get badge URL.
+     *
+     * @return \moodle_url|null
+     */
     public function get_badge_url() {
         return $this->badgeurlresolver ? $this->badgeurlresolver->get_url_for_level($this->level) : null;
     }
 
+    /**
+     * Get description.
+     *
+     * @return string
+     */
     public function get_description() {
         return $this->desc ?? '';
     }
 
+    /**
+     * Get name.
+     *
+     * @return string
+     */
     public function get_name() {
         return $this->name ?? '';
     }

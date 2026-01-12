@@ -91,7 +91,7 @@ class course_user_leaderboard implements leaderboard {
      * @param levels_info $levelsinfo The levels info.
      * @param int $courseid The course ID.
      * @param string[] $columns The name of the columns.
-     * @param ranker $ranker An alternative ranker.
+     * @param ranker|null $ranker An alternative ranker.
      * @param int $groupid This should not be used, but kept for backwards compat.
      */
     public function __construct(

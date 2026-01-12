@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Level Up XP.  If not, see <https://www.gnu.org/licenses/>.
 //
-// https://levelup.plus
+// https://levelup.plus.
 
 /**
  * Block XP user edit form.
@@ -53,12 +53,32 @@ class user_xp extends dynamic_form {
         return $this->get_world()->get_store()->get_state($userid);
     }
 
+    /**
+     * Process the form submission.
+     *
+     * @return void
+     */
+    /**
+     * Process the form submission.
+     *
+     * @return void
+     */
     public function process_dynamic_submission() {
         $state = $this->get_state(); // Acts as validation.
         $data = $this->get_data();
         $this->get_world()->get_store()->set($state->get_id(), $data->xp);
     }
 
+    /**
+     * Set data for dynamic submission.
+     *
+     * @return void
+     */
+    /**
+     * Set data for dynamic submission.
+     *
+     * @return void
+     */
     public function set_data_for_dynamic_submission(): void {
         $userid = $this->optional_param('userid', 0, PARAM_INT);
         $state = $this->get_state();
@@ -104,6 +124,13 @@ class user_xp extends dynamic_form {
      * @param array $data The data submitted.
      * @param array $files The files submitted.
      * @return array of errors.
+     */
+    /**
+     * Validation.
+     *
+     * @param array $data Data to validate
+     * @param array $files Files
+     * @return array
      */
     public function validation($data, $files) {
         $errors = [];

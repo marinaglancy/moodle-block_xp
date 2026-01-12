@@ -60,6 +60,11 @@ class report_controller extends page_controller {
     /** @var flexible_table The table. */
     protected $table;
 
+    /**
+     * Define optional params.
+     *
+     * @return void
+     */
     protected function define_optional_params() {
         return [
             ['userid', null, PARAM_INT],
@@ -74,6 +79,11 @@ class report_controller extends page_controller {
         ];
     }
 
+    /**
+     * Permissions checks.
+     *
+     * @return void
+     */
     protected function permissions_checks() {
         $accessperms = $this->world->get_access_permissions();
         if (!($accessperms instanceof \block_xp\local\permission\access_report_permissions)) {
@@ -82,6 +92,11 @@ class report_controller extends page_controller {
         $accessperms->require_access_report();
     }
 
+    /**
+     * Post login.
+     *
+     * @return void
+     */
     protected function post_login() {
         parent::post_login();
 
@@ -89,6 +104,11 @@ class report_controller extends page_controller {
         $this->isusingoldxpp = $addon->is_older_than(2024090500);
     }
 
+    /**
+     * Pre content.
+     *
+     * @return void
+     */
     protected function pre_content() {
         if (!$this->world->get_access_permissions()->can_manage()) {
             return;
@@ -132,10 +152,20 @@ class report_controller extends page_controller {
         $this->world->get_store()->delete($userid);
     }
 
+    /**
+     * Get page HTML head title.
+     *
+     * @return string
+     */
     protected function get_page_html_head_title() {
         return get_string('coursereport', 'block_xp');
     }
 
+    /**
+     * Get page heading.
+     *
+     * @return string
+     */
     protected function get_page_heading() {
         return get_string('coursereport', 'block_xp');
     }
@@ -156,6 +186,11 @@ class report_controller extends page_controller {
         return $this->form;
     }
 
+    /**
+     * Get table.
+     *
+     * @return object
+     */
     protected function get_table() {
         if (!$this->table) {
             $this->table = new \block_xp\output\report_table(
@@ -241,11 +276,21 @@ class report_controller extends page_controller {
         return $filterset;
     }
 
+    /**
+     * Page advanced heading.
+     *
+     * @return void
+     */
     protected function page_advanced_heading() {
         $output = $this->get_renderer();
         echo $output->advanced_heading(get_string('coursereport', 'block_xp'), $this->get_advanced_heading_options());
     }
 
+    /**
+     * Page content.
+     *
+     * @return string
+     */
     protected function page_content() {
         global $PAGE;
 
@@ -301,6 +346,11 @@ class report_controller extends page_controller {
         }
     }
 
+    /**
+     * Page user filter.
+     *
+     * @return void
+     */
     protected function page_user_filter() {
         if ($this->isusingoldxpp) {
             return null;

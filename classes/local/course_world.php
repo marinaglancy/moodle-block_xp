@@ -104,14 +104,29 @@ class course_world implements world {
         $this->perms = new \block_xp\local\permission\context_permissions($this->context);
     }
 
+    /**
+     * Get access permissions.
+     *
+     * @return object
+     */
     public function get_access_permissions() {
         return $this->perms;
     }
 
+    /**
+     * Get config.
+     *
+     * @return object
+     */
     public function get_config() {
         return $this->config;
     }
 
+    /**
+     * Get collection strategy.
+     *
+     * @return object
+     */
     public function get_collection_strategy() {
         if (!$this->strategy) {
             $this->strategy = new \block_xp\local\strategy\course_world_collection_strategy(
@@ -171,6 +186,11 @@ class course_world implements world {
         return $this->filtermanager;
     }
 
+    /**
+     * Get levels info.
+     *
+     * @return object
+     */
     public function get_levels_info() {
         if (!$this->levelsinfo) {
             // We must apply this check in case an older version of XP+ is used with this.
@@ -234,6 +254,11 @@ class course_world implements world {
         return $this->statestoreobserver;
     }
 
+    /**
+     * Get store.
+     *
+     * @return object
+     */
     public function get_store() {
         if (!$this->store) {
             $this->store = new \block_xp\local\xp\course_user_state_store(

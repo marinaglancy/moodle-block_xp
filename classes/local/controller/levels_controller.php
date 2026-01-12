@@ -43,6 +43,11 @@ class levels_controller extends page_controller {
     /** @var string The route name. */
     protected $routename = 'levels';
 
+    /**
+     * Define optional params.
+     *
+     * @return void
+     */
     protected function define_optional_params() {
         return [
             ['reset', false, PARAM_BOOL, false],
@@ -50,6 +55,11 @@ class levels_controller extends page_controller {
         ];
     }
 
+    /**
+     * Pre content.
+     *
+     * @return void
+     */
     protected function pre_content() {
         parent::pre_content();
 
@@ -62,14 +72,29 @@ class levels_controller extends page_controller {
         }
     }
 
+    /**
+     * Get page HTML head title.
+     *
+     * @return string
+     */
     protected function get_page_html_head_title() {
         return get_string('levels', 'block_xp');
     }
 
+    /**
+     * Get page heading.
+     *
+     * @return string
+     */
     protected function get_page_heading() {
         return get_string('levels', 'block_xp');
     }
 
+    /**
+     * Get react module.
+     *
+     * @return array
+     */
     protected function get_react_module() {
         global $USER;
 
@@ -103,10 +128,20 @@ class levels_controller extends page_controller {
         ];
     }
 
+    /**
+     * Get reset URL.
+     *
+     * @return \moodle_url
+     */
     protected function get_reset_url() {
         return new url($this->pageurl, ['reset' => 1, 'sesskey' => sesskey()]);
     }
 
+    /**
+     * Page content.
+     *
+     * @return string
+     */
     protected function page_content() {
         $output = $this->get_renderer();
 
@@ -126,6 +161,11 @@ class levels_controller extends page_controller {
         $this->page_danger_zone_content();
     }
 
+    /**
+     * Page danger zone content.
+     *
+     * @return void
+     */
     protected function page_danger_zone_content() {
     }
 }

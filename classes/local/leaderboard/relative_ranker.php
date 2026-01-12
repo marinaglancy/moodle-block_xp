@@ -47,7 +47,7 @@ class relative_ranker implements ranker {
     /**
      * Constructor.
      *
-     * @param state $relativestate The state this is relative to, can be omitted to get the first
+     * @param state|null $relativestate The state this is relative to, can be omitted to get the first
      */
     public function __construct(?state $relativestate = null) {
         $this->relativestate = $relativestate;

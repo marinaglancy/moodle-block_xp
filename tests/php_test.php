@@ -81,6 +81,7 @@ final class php_test extends base_testcase {
      *
      * @dataProvider php_files_provider
      * @covers \block_xp\di
+     * @param string $relpath Relative path to the file to include.
      */
     public function test_file_inclusion($relpath): void {
         global $CFG, $DB;

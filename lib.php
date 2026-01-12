@@ -30,7 +30,8 @@ use block_xp\local\plugin\addon;
 /**
  * Environment check.
  *
- * @return environment_results
+ * @param environment_results $result The environment results object
+ * @return environment_results|null
  */
 function block_xp_env_check_addon_compatibility(environment_results $result) {
     if (!addon::is_container_present() || addon::is_compatible()) {

@@ -46,6 +46,11 @@ class infos_controller extends page_controller {
     /** @var object */
     protected $form;
 
+    /**
+     * Define optional params.
+     *
+     * @return void
+     */
     protected function define_optional_params() {
         return [
             ['edit', false, PARAM_BOOL, true],
@@ -61,6 +66,11 @@ class infos_controller extends page_controller {
         return (bool) $this->world->get_config()->get('enableinfos');
     }
 
+    /**
+     * Get form.
+     *
+     * @return object
+     */
     protected function get_form() {
         if (!$this->form) {
             $this->form = new instructions($this->pageurl->out(false));
@@ -68,14 +78,29 @@ class infos_controller extends page_controller {
         return $this->form;
     }
 
+    /**
+     * Get page HTML head title.
+     *
+     * @return string
+     */
     protected function get_page_html_head_title() {
         return get_string('infos', 'block_xp');
     }
 
+    /**
+     * Get page heading.
+     *
+     * @return string
+     */
     protected function get_page_heading() {
         return get_string('infos', 'block_xp');
     }
 
+    /**
+     * Page content.
+     *
+     * @return string
+     */
     protected function page_content() {
         $output = $this->get_renderer();
         $levelsinfo = $this->world->get_levels_info();

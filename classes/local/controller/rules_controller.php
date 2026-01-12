@@ -54,6 +54,11 @@ class rules_controller extends page_controller {
     /** @var array Whether to show legacy headings. */
     protected $legacyheadings;
 
+    /**
+     * Define optional params.
+     *
+     * @return void
+     */
     protected function define_optional_params() {
         return [
             ['reset', false, PARAM_BOOL, false],
@@ -61,6 +66,11 @@ class rules_controller extends page_controller {
         ];
     }
 
+    /**
+     * Post login.
+     *
+     * @return void
+     */
     protected function post_login() {
         parent::post_login();
         $this->filtermanager = $this->world->get_filter_manager();
@@ -68,6 +78,11 @@ class rules_controller extends page_controller {
         $this->legacyheadings = di::get('addon')->is_activated() && di::get('addon')->is_older_than(2023100402);
     }
 
+    /**
+     * Pre content.
+     *
+     * @return void
+     */
     protected function pre_content() {
 
         // Reset course rules to defaults.
@@ -88,19 +103,42 @@ class rules_controller extends page_controller {
         }
     }
 
+    /**
+     * Handle save.
+     *
+     * @return void
+     */
     protected function handle_save() {
         $filters = isset($_POST['filters']) ? $_POST['filters'] : [];
         $this->userfilters = $this->save_filters($filters, $this->userfilters);
     }
 
+    /**
+     * Save filters.
+     *
+     * @param array $filters The filters to save
+     * @param array $existingfilters The existing filters
+     * @param string|null $category The category
+     * @return void
+     */
     protected function save_filters($filters, $existingfilters, $category = null) {
         static::save_rules_filters($this->world, $filters, $existingfilters, $category);
     }
 
+    /**
+     * Get page HTML head title.
+     *
+     * @return string
+     */
     protected function get_page_html_head_title() {
         return get_string('eventsrules', 'block_xp');
     }
 
+    /**
+     * Get page heading.
+     *
+     * @return string
+     */
     protected function get_page_heading() {
         return get_string('eventsrules', 'block_xp');
     }
@@ -171,6 +209,11 @@ class rules_controller extends page_controller {
         return new \block_xp\output\filters_widget_group([$this->get_events_widget_element()]);
     }
 
+    /**
+     * Page content.
+     *
+     * @return string
+     */
     protected function page_content() {
         global $PAGE;
         $output = $this->get_renderer();
@@ -192,9 +235,19 @@ class rules_controller extends page_controller {
         echo $output->rules_page_loading_check_success();
     }
 
+    /**
+     * Page plus promo content.
+     *
+     * @return void
+     */
     protected function page_plus_promo_content() {
     }
 
+    /**
+     * Page advanced heading.
+     *
+     * @return void
+     */
     protected function page_advanced_heading() {
         global $PAGE;
         $output = $this->get_renderer();
@@ -221,6 +274,11 @@ class rules_controller extends page_controller {
         ]);
     }
 
+    /**
+     * Page rules content.
+     *
+     * @return void
+     */
     protected function page_rules_content() {
         $output = $this->get_renderer();
 
@@ -231,6 +289,11 @@ class rules_controller extends page_controller {
         echo $output->render($this->get_widget_group());
     }
 
+    /**
+     * Page danger zone content.
+     *
+     * @return void
+     */
     protected function page_danger_zone_content() {
     }
 

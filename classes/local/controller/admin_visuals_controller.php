@@ -51,6 +51,11 @@ class admin_visuals_controller extends admin_route_controller {
     /** @var moodleform The form. */
     private $form;
 
+    /**
+     * Define optional params.
+     *
+     * @return void
+     */
     protected function define_optional_params() {
         return [
             ['reset', false, PARAM_BOOL, false],
@@ -124,6 +129,11 @@ class admin_visuals_controller extends admin_route_controller {
         ];
     }
 
+    /**
+     * Pre content.
+     *
+     * @return void
+     */
     protected function pre_content() {
         // Capture form submission.
         $form = $this->get_form();

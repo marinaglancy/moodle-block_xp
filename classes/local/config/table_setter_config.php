@@ -59,14 +59,31 @@ class table_setter_config implements config {
         $this->whereparams = $whereparams;
     }
 
+    /**
+     * Get.
+     *
+     * @param string $name Name
+     *
+     * @return mixed
+     */
     public function get($name) {
         return null;
     }
 
+    /**
+     * Get all.
+     *
+     * @return array
+     */
     public function get_all() {
         return [];
     }
 
+    /**
+     * Get columns.
+     *
+     * @return array
+     */
     protected function get_columns() {
         if (!isset($this->columns)) {
             $this->columns = array_flip(array_map(function ($col) {
@@ -76,6 +93,13 @@ class table_setter_config implements config {
         return $this->columns;
     }
 
+    /**
+     * Has.
+     *
+     * @param string $name Name
+     *
+     * @return bool
+     */
     public function has($name) {
         if (in_array($name, $this->reservedkeys)) {
             return false;
@@ -83,6 +107,14 @@ class table_setter_config implements config {
         return array_key_exists($name, $this->get_columns());
     }
 
+    /**
+     * Set.
+     *
+     * @param string $name Name
+     * @param mixed $value Value
+     *
+     * @return void
+     */
     public function set($name, $value) {
         if (!$this->has($name)) {
             throw new \coding_exception('Invalid config name: ' . $name);
@@ -90,6 +122,13 @@ class table_setter_config implements config {
         $this->db->set_field_select($this->tablename, $name, $value, $this->wheresql, $this->whereparams);
     }
 
+    /**
+     * Set many.
+     *
+     * @param array $values Values
+     *
+     * @return void
+     */
     public function set_many(array $values) {
         foreach ($values as $name => $value) {
             $this->set($name, $value);

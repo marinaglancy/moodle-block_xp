@@ -49,6 +49,11 @@ class admin_levels_controller extends admin_route_controller {
     /** @var string Admin section name. */
     protected $sectionname = 'block_xp_default_levels';
 
+    /**
+     * Define optional params.
+     *
+     * @return void
+     */
     protected function define_optional_params() {
         return [
             ['reset', false, PARAM_BOOL, false],
@@ -56,11 +61,21 @@ class admin_levels_controller extends admin_route_controller {
         ];
     }
 
+    /**
+     * Post login.
+     *
+     * @return void
+     */
     protected function post_login() {
         parent::post_login();
         $this->config = \block_xp\di::get('config');
     }
 
+    /**
+     * Pre content.
+     *
+     * @return void
+     */
     protected function pre_content() {
         parent::pre_content();
 
@@ -74,6 +89,11 @@ class admin_levels_controller extends admin_route_controller {
         }
     }
 
+    /**
+     * Content.
+     *
+     * @return string
+     */
     protected function content() {
         $output = $this->get_renderer();
         $forwholesite = di::get('config')->get('context') == CONTEXT_SYSTEM;
@@ -110,6 +130,11 @@ class admin_levels_controller extends admin_route_controller {
         }
     }
 
+    /**
+     * Get react module.
+     *
+     * @return array
+     */
     protected function get_react_module() {
         $urlserializer = new url_serializer();
         $badgeurlresolver = di::get('badge_url_resolver');

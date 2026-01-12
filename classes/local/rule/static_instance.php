@@ -52,10 +52,20 @@ class static_instance implements instance {
         $this->record = $record;
     }
 
+    /**
+     * Get ID.
+     *
+     * @return int
+     */
     public function get_id(): int {
         return $this->record->id;
     }
 
+    /**
+     * Get context.
+     *
+     * @return \context
+     */
     public function get_context(): \context {
         if (!isset($this->context)) {
             $this->context = \context::instance_by_id($this->record->contextid);
@@ -63,6 +73,11 @@ class static_instance implements instance {
         return $this->context;
     }
 
+    /**
+     * Get child context.
+     *
+     * @return \context
+     */
     public function get_child_context(): ?\context {
         if (!$this->record->childcontextid) {
             return null;
@@ -73,18 +88,38 @@ class static_instance implements instance {
         return $this->childcontext;
     }
 
+    /**
+     * Get points.
+     *
+     * @return int
+     */
     public function get_points(): int {
         return $this->record->points;
     }
 
+    /**
+     * Get type name.
+     *
+     * @return string
+     */
     public function get_type_name(): string {
         return $this->record->type;
     }
 
+    /**
+     * Get filter name.
+     *
+     * @return string
+     */
     public function get_filter_name(): string {
         return $this->record->filter;
     }
 
+    /**
+     * Get filter config.
+     *
+     * @return array
+     */
     public function get_filter_config(): object {
         return (object) [
             'courseid' => $this->record->filtercourseid,

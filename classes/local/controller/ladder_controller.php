@@ -53,6 +53,11 @@ class ladder_controller extends page_controller {
     /** @var string */
     protected $routename = 'ladder';
 
+    /**
+     * Page setup.
+     *
+     * @return void
+     */
     protected function page_setup() {
         global $PAGE;
         parent::page_setup();
@@ -127,10 +132,20 @@ class ladder_controller extends page_controller {
         return $table;
     }
 
+    /**
+     * Get page HTML head title.
+     *
+     * @return string
+     */
     protected function get_page_html_head_title() {
         return get_string('ladder', 'block_xp');
     }
 
+    /**
+     * Get page heading.
+     *
+     * @return string
+     */
     protected function get_page_heading() {
         return get_string('ladder', 'block_xp');
     }
@@ -173,6 +188,11 @@ class ladder_controller extends page_controller {
         return (int) $pagesize;
     }
 
+    /**
+     * Page content.
+     *
+     * @return string
+     */
     protected function page_content() {
         global $PAGE;
         $output = $this->get_renderer();

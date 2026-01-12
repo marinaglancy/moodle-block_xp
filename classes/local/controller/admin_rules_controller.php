@@ -47,6 +47,11 @@ class admin_rules_controller extends admin_route_controller {
     /** @var admin_filter_manager The manager. */
     protected $filtermanager;
 
+    /**
+     * Define optional params.
+     *
+     * @return void
+     */
     protected function define_optional_params() {
         return [
             ['revert', false, PARAM_BOOL, false],
@@ -55,6 +60,11 @@ class admin_rules_controller extends admin_route_controller {
         ];
     }
 
+    /**
+     * Pre content.
+     *
+     * @return void
+     */
     protected function pre_content() {
         $this->filtermanager = new \block_xp\local\xp\admin_filter_manager(\block_xp\di::get('db'));
 
@@ -203,6 +213,11 @@ class admin_rules_controller extends admin_route_controller {
         return new \block_xp\output\filters_widget_group([$this->get_events_widget_element()]);
     }
 
+    /**
+     * Page plus promo content.
+     *
+     * @return void
+     */
     protected function page_plus_promo_content() {
         $promourl = $this->urlresolver->reverse('admin/promo');
         echo $this->get_renderer()->notification_without_close(
@@ -211,6 +226,11 @@ class admin_rules_controller extends admin_route_controller {
         );
     }
 
+    /**
+     * Page rules content.
+     *
+     * @return void
+     */
     protected function page_rules_content() {
         $output = $this->get_renderer();
         echo $output->render($this->get_widget_group());

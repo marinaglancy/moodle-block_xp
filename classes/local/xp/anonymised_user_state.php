@@ -55,42 +55,92 @@ class anonymised_user_state extends user_state {
         $this->state = $state;
     }
 
+    /**
+     * Get ID.
+     *
+     * @return int
+     */
     public function get_id() {
         return $this->anonuser->id;
     }
 
+    /**
+     * Get link.
+     *
+     * @return \moodle_url
+     */
     public function get_link() {
         return null;
     }
 
+    /**
+     * Get name.
+     *
+     * @return string
+     */
     public function get_name() {
         return get_string('someoneelse', 'block_xp');
     }
 
+    /**
+     * Get picture.
+     *
+     * @return string
+     */
     public function get_picture() {
         return user_utils::default_picture();
     }
 
+    /**
+     * Get level.
+     *
+     * @return object
+     */
     public function get_level() {
         return $this->state->get_level();
     }
 
+    /**
+     * Get ratio in level.
+     *
+     * @return float
+     */
     public function get_ratio_in_level() {
         return $this->state->get_ratio_in_level();
     }
 
+    /**
+     * Get total XP in level.
+     *
+     * @return int
+     */
     public function get_total_xp_in_level() {
         return $this->state->get_total_xp_in_level();
     }
 
+    /**
+     * Get user.
+     *
+     * @return object
+     */
     public function get_user() {
         return $this->anonuser;
     }
 
+    /**
+     * Get XP.
+     *
+     * @return int
+     */
     public function get_xp() {
         return $this->state->get_xp();
     }
 
+    /**
+     * Get XP in level.
+     *
+     * @return int
+     */
     public function get_xp_in_level() {
         return $this->state->get_xp_in_level();
     }

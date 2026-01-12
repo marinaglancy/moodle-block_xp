@@ -58,6 +58,11 @@ class log_controller extends page_controller {
     /** @var int|null The user ID to filter the logs for. Use {@see self::get_user_id} to obtain. */
     protected $userid = null;
 
+    /**
+     * Permissions checks.
+     *
+     * @return void
+     */
     protected function permissions_checks() {
         $accessperms = $this->world->get_access_permissions();
         if (!($accessperms instanceof \block_xp\local\permission\access_logs_permissions)) {
@@ -66,6 +71,11 @@ class log_controller extends page_controller {
         $accessperms->require_access_logs();
     }
 
+    /**
+     * Define optional params.
+     *
+     * @return void
+     */
     protected function define_optional_params() {
         return [
             ['userid', null, PARAM_INT],
@@ -73,6 +83,11 @@ class log_controller extends page_controller {
         ];
     }
 
+    /**
+     * Post login.
+     *
+     * @return void
+     */
     protected function post_login() {
         parent::post_login();
 
@@ -80,6 +95,11 @@ class log_controller extends page_controller {
         $this->isusingoldxpp = $addon->is_older_than(2024090500);
     }
 
+    /**
+     * Get table.
+     *
+     * @return object
+     */
     protected function get_table() {
         $table = new \block_xp\output\log_table(
             $this->world,
@@ -107,10 +127,20 @@ class log_controller extends page_controller {
         return $filterset;
     }
 
+    /**
+     * Get page HTML head title.
+     *
+     * @return string
+     */
     protected function get_page_html_head_title() {
         return get_string('courselog', 'block_xp');
     }
 
+    /**
+     * Get page heading.
+     *
+     * @return string
+     */
     protected function get_page_heading() {
         return get_string('courselog', 'block_xp');
     }
@@ -131,6 +161,11 @@ class log_controller extends page_controller {
         return $this->userid;
     }
 
+    /**
+     * Page advanced heading.
+     *
+     * @return void
+     */
     protected function page_advanced_heading() {
         $output = $this->get_renderer();
         echo $output->advanced_heading(get_string('courselog', 'block_xp'), [
@@ -139,6 +174,11 @@ class log_controller extends page_controller {
         ]);
     }
 
+    /**
+     * Page content.
+     *
+     * @return string
+     */
     protected function page_content() {
         global $PAGE;
 
@@ -166,6 +206,11 @@ class log_controller extends page_controller {
         echo html_writer::end_div();
     }
 
+    /**
+     * Page user filter.
+     *
+     * @return void
+     */
     protected function page_user_filter() {
         if ($this->isusingoldxpp || $this->get_user_id()) {
             return null;

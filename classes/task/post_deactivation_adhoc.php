@@ -30,6 +30,11 @@ use core\task\adhoc_task;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class post_deactivation_adhoc extends adhoc_task {
+    /**
+     * Execute the task.
+     *
+     * @return void
+     */
     public function execute() {
         if (defined('PHPUNIT_TEST')) {
             return;

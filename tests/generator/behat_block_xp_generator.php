@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Level Up XP.  If not, see <https://www.gnu.org/licenses/>.
 //
-// https://levelup.plus
+// https://levelup.plus.
 
 /**
  * Behat steps in plugin block_xp
@@ -26,6 +26,11 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class behat_block_xp_generator extends behat_generator_base {
+    /**
+     * Get creatable entities.
+     *
+     * @return array
+     */
     protected function get_creatable_entities(): array {
         return [
             'config' => [
@@ -47,9 +52,9 @@ class behat_block_xp_generator extends behat_generator_base {
     }
 
     /**
-     * Get the mission ID.
+     * Get the world context ID.
      *
-     * @param string $mission The mission name
+     * @param string $worldcontext The world context identifier
      * @return int The ID
      */
     protected function get_worldcontext_id(string $worldcontext): int {

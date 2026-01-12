@@ -1127,7 +1127,7 @@ EOT
      * Recent activity.
      *
      * @param activity[] $activity The activity entries.
-     * @param moodle_url $moreurl The URL to view more (deprecated).
+     * @param moodle_url|null $moreurl The URL to view more (deprecated).
      * @return string
      */
     public function recent_activity(array $activity, ?moodle_url $moreurl = null) {

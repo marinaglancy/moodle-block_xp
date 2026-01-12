@@ -36,6 +36,8 @@ require_once($CFG->dirroot . '/backup/util/helper/restore_decode_rule.class.php'
 class xpladder_decode_rule extends \restore_decode_rule {
     /**
      * Constructor.
+     *
+     * @param string $placeholder The placeholder string
      */
     public function __construct($placeholder = 'BLOCKXPSHORTCODEXPLADDER') {
         parent::__construct($placeholder, '', ['context', 'top', 'hidelink', 'withprogress']);
