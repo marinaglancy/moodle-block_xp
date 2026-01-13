@@ -250,9 +250,9 @@ class behat_block_xp extends behat_base {
      * A table row contains.
      *
      * @Given /^the table row "(?P<t>(?:[^"]|\\")*)" should contain "(?P<e>(?:[^"]|\\")*)" "(?P<etype>(?:[^"]|\\")*)"$/
-     * @param string $ttext
-     * @param string $element
-     * @param string $elementtype
+     * @param string $text The text to search for in the row.
+     * @param string $element The element to find.
+     * @param string $elementtype The element type.
      */
     public function the_table_row_foo_should_contain($text, $element, $elementtype) {
         $rowxpath = "//tr[contains(normalize-space(.), '$text')]";

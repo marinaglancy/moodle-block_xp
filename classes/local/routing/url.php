@@ -46,8 +46,8 @@ class url extends \moodle_url {
      * Constructor.
      *
      * @param mixed $url The URL.
-     * @param array $params The parameters.
-     * @param string $anchor The anchor.
+     * @param array|null $params The parameters.
+     * @param string|null $anchor The anchor.
      */
     public function __construct($url, ?array $params = null, $anchor = null) {
         if ($url instanceof url) {

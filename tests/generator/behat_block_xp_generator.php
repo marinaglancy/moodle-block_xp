@@ -48,9 +48,9 @@ class behat_block_xp_generator extends behat_generator_base {
     }
 
     /**
-     * Get the mission ID.
+     * Get the world context ID.
      *
-     * @param string $mission The mission name
+     * @param string $worldcontext The world context name.
      * @return int The ID
      */
     protected function get_worldcontext_id(string $worldcontext): int {

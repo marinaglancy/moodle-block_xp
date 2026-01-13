@@ -81,6 +81,7 @@ final class php_test extends base_testcase {
      * other PHP versions. It would make the tests fail entirely.
      *
      * @dataProvider php_files_provider
+     * @param string $relpath The relative path.
      * @covers \block_xp\di
      */
     public function test_file_inclusion($relpath): void {

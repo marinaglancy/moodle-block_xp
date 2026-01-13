@@ -141,7 +141,7 @@ class xp_widget implements renderable, templatable {
     /**
      * Set next level.
      *
-     * @param level $nextlevel The next level.
+     * @param level|null $nextlevel The next level.
      */
     public function set_next_level(?level $nextlevel = null) {
         $this->nextlevel = $nextlevel;
@@ -159,7 +159,7 @@ class xp_widget implements renderable, templatable {
     /**
      * Set rank.
      *
-     * @param rank $rank The rank.
+     * @param rank|null $rank The rank.
      */
     public function set_rank(?rank $rank = null) {
         $this->rank = $rank;

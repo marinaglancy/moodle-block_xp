@@ -40,6 +40,7 @@ interface user_filter {
     /**
      * Get the SQL fragment to filter users.
      *
+     * @param string $useridalias The user ID alias.
      * @return array Containing both SQL fragment, and params.
      */
     public function get_sql(string $useridalias): array;

@@ -37,6 +37,8 @@ class xpladder_decode_rule extends \restore_decode_rule {
 
     /**
      * Constructor.
+     *
+     * @param string $placeholder The placeholder.
      */
     public function __construct($placeholder = 'BLOCKXPSHORTCODEXPLADDER') {
         parent::__construct($placeholder, '', ['context', 'top', 'hidelink', 'withprogress']);

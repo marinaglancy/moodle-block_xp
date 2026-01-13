@@ -45,7 +45,7 @@ interface level_factory {
      * @param int $level The level number.
      * @param int $xp The XP required.
      * @param array $metadata The level metadata.
-     * @param badge_url_resolver $badgeurlresolver The badge URL resolver.
+     * @param badge_url_resolver|null $badgeurlresolver The badge URL resolver.
      * @return \block_xp\local\xp\level
      */
     public function make_level($level, $xp, array $metadata = [], ?badge_url_resolver $badgeurlresolver = null);

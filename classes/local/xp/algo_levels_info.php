@@ -82,8 +82,8 @@ class algo_levels_info implements levels_info, levels_info_with_algo {
      * Constructor.
      *
      * @param array $data Array containing both keys 'xp' and 'desc'. Indexes should start at 1.
-     * @param badge_url_resolver $resolver The server resolving badge URLs if any.
-     * @param level_factory $levelfactory The level factory.
+     * @param badge_url_resolver|null $resolver The server resolving badge URLs if any.
+     * @param level_factory|null $levelfactory The level factory.
      */
     public function __construct(array $data, ?badge_url_resolver $resolver = null, ?level_factory $levelfactory = null) {
         $this->data = $data;
@@ -275,8 +275,8 @@ class algo_levels_info implements levels_info, levels_info_with_algo {
     /**
      * Make levels from the defaults.
      *
-     * @param badge_url_resolver $resolver The badge URL resolver.
-     * @param level_factory $levelfactory The level factory.
+     * @param badge_url_resolver|null $resolver The badge URL resolver.
+     * @param level_factory|null $levelfactory The level factory.
      * @return self
      */
     public static function make_from_defaults(?badge_url_resolver $resolver = null, ?level_factory $levelfactory = null) {

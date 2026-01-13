@@ -262,7 +262,7 @@ abstract class route_controller implements controller {
     /**
      * Helper method to redirect.
      *
-     * @param url $url The URL to go to.
+     * @param url|null $url The URL to go to.
      * @param string $message The redirect message.
      * @return void
      */

@@ -50,8 +50,8 @@ class filtered_config extends proxy_config {
      * Constructor.
      *
      * @param config $config The config object.
-     * @param array $allowedkeys Values are allowed keys, use null to allow everything.
-     * @param array $excludedkeys Values are excluded keys.
+     * @param array|null $allowedkeys Values are allowed keys, use null to allow everything.
+     * @param array|null $excludedkeys Values are excluded keys.
      */
     public function __construct(config $config, ?array $allowedkeys = null, ?array $excludedkeys = null) {
         parent::__construct($config);

@@ -50,6 +50,7 @@ class default_leaderboard_factory_maker implements leaderboard_factory_maker {
      * Constructor.
      *
      * @param moodle_database $db The database.
+     * @param config $adminconfig The admin config.
      */
     public function __construct(moodle_database $db, config $adminconfig) {
         $this->db = $db;
@@ -60,7 +61,7 @@ class default_leaderboard_factory_maker implements leaderboard_factory_maker {
      * Get the leaderboard factory.
      *
      * @param world $world The world.
-     * @param config $configoverride An optional config override.
+     * @param config|null $configoverride An optional config override.
      * @return leaderboard_factory
      */
     public function get_leaderboard_factory(world $world, ?config $configoverride = null): leaderboard_factory {

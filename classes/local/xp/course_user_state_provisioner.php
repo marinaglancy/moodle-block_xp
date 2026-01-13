@@ -49,7 +49,7 @@ class course_user_state_provisioner {
      *
      * @param context $context The context.
      * @param state_store $store The state store.
-     * @param progress_trace $logger The logger.
+     * @param progress_trace|null $logger The logger.
      */
     public function __construct(context $context, state_store $store, ?progress_trace $logger = null) {
         $this->db = di::get('db');

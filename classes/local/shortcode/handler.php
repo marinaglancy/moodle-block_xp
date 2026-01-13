@@ -60,7 +60,7 @@ class handler {
      *
      * Also check whether the current user has access to the world.
      *
-     * @param object $env The environment.
+     * @param \context $context The context.
      * @return world|null
      */
     protected static function get_world_from_context(\context $context) {

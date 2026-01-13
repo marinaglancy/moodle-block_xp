@@ -40,6 +40,7 @@ class everyone implements user_filter {
     /**
      * Get the SQL fragment to filter users.
      *
+     * @param string $useridalias The user ID alias.
      * @return array
      */
     public function get_sql(string $useridalias): array {
